@@ -6,39 +6,47 @@
   if (!nav || !window.visualViewport) return;
 
   const MOBILE_MAX = 768;
-  let active = false;
+  const originalParent = nav.parentElement;
+  const originalNextSibling = nav.nextElementSibling;
+  let movedToBody = false;
 
   function shouldActivate(){
     return window.innerWidth <= MOBILE_MAX;
   }
 
+  function ensureLocation(activate){
+    if (activate && !movedToBody){
+      document.body.appendChild(nav);
+      movedToBody = true;
+    } else if (!activate && movedToBody){
+      // Restore to original DOM position
+      if (originalNextSibling) originalParent.insertBefore(nav, originalNextSibling);
+      else originalParent.appendChild(nav);
+      nav.removeAttribute('style');
+      movedToBody = false;
+    }
+  }
+
   function update(){
     if (!shouldActivate()){
-      if (active){
-        nav.style.position = '';
-        nav.style.top = '';
-        nav.style.left = '';
-        nav.style.right = '';
-        nav.style.bottom = '';
-        nav.style.transform = '';
-        active = false;
-      }
+      ensureLocation(false);
       return;
     }
+    ensureLocation(true);
     const vv = window.visualViewport;
     const navH = nav.offsetHeight;
-    // Position relative to the document scroll, anchored to the bottom of the visual viewport
-    const top = (window.scrollY + vv.height + vv.offsetTop) - navH;
+    // Position in document coordinates so it tracks scroll naturally,
+    // pinned to the bottom of the current visual viewport
+    const top = (window.scrollY + vv.offsetTop + vv.height) - navH;
     nav.style.position = 'absolute';
     nav.style.top = top + 'px';
     nav.style.left = '0';
     nav.style.right = '0';
     nav.style.bottom = 'auto';
     nav.style.transform = 'none';
-    active = true;
+    nav.style.zIndex = '60';
   }
 
-  // Use rAF to keep position in sync with the viewport during scroll
   let rafId = null;
   function onChange(){
     if (rafId) return;
@@ -53,7 +61,8 @@
   window.addEventListener('scroll', onChange, { passive: true });
   window.addEventListener('resize', onChange);
   window.addEventListener('orientationchange', onChange);
-  update();
+  // Initial position
+  requestAnimationFrame(update);
 })();
 
 
