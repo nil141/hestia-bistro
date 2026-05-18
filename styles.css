@@ -991,28 +991,28 @@ button{ font-family:inherit; cursor:pointer; }
    RESPONSIVE
    ──────────────────────────────────────────────────────── */
 @media (max-width: 768px){
-  /* Mobile nav: RESERVAR / CARTA / FAQ — pure fixed, no transforms, no animations */
+  /* Mobile nav: RESERVAR / CARTA / FAQ — clean fixed bottom, no tricks */
   .nav-center{
     position:fixed;
     top:auto;
-    bottom:-60px;            /* extends below viewport edge */
+    bottom:0;
     left:0;
     right:0;
     width:100%;
-    /* No transform — let the browser handle native fixed positioning */
     transform:none;
     -webkit-transform:none;
     will-change:auto;
-    /* No transitions — keep it 100% static */
     transition:none !important;
     justify-content:center;
-    align-items:flex-start;
     gap:34px;
-    padding:20px 20px calc(60px + 20px + env(safe-area-inset-bottom));
+    /* Safe area for iPhone notch/home bar; large enough to absorb iOS bounce */
+    padding-top:18px;
+    padding-bottom:max(22px, calc(18px + env(safe-area-inset-bottom)));
+    padding-left:20px;
+    padding-right:20px;
     background:#FFFFFF;
     border-top:1px solid rgba(0,0,0,.06);
     z-index:60;
-    overflow:hidden;
   }
   .nav-center .nav-link{
     color:#14100B;
@@ -1021,8 +1021,7 @@ button{ font-family:inherit; cursor:pointer; }
     letter-spacing:.22em;
     transition:none !important;
   }
-  /* Page has breathing room above the bottom bar */
-  body{ padding-bottom:80px; overscroll-behavior:none; }
+  body{ padding-bottom:90px; overscroll-behavior:none; }
   html{ overscroll-behavior:none; -webkit-overflow-scrolling:auto; }
   .site-footer{ margin-bottom:0; padding-bottom:140px; }
 }
