@@ -991,38 +991,39 @@ button{ font-family:inherit; cursor:pointer; }
    RESPONSIVE
    ──────────────────────────────────────────────────────── */
 @media (max-width: 768px){
-  /* Mobile nav: move RESERVAR / CARTA / FAQ to a fixed bottom bar */
+  /* Mobile nav: RESERVAR / CARTA / FAQ — pure fixed, no transforms, no animations */
   .nav-center{
     position:fixed;
     top:auto;
-    bottom:-60px;          /* extends below viewport edge */
+    bottom:-60px;            /* extends below viewport edge */
     left:0;
     right:0;
     width:100%;
-    transform:translate3d(0,0,0);
-    -webkit-transform:translate3d(0,0,0);
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden;
-    will-change:transform;
+    /* No transform — let the browser handle native fixed positioning */
+    transform:none;
+    -webkit-transform:none;
+    will-change:auto;
+    /* No transitions — keep it 100% static */
+    transition:none !important;
     justify-content:center;
     align-items:flex-start;
     gap:34px;
-    /* big bottom padding compensates the negative bottom; safe-area for iPhone notch */
     padding:20px 20px calc(60px + 20px + env(safe-area-inset-bottom));
     background:#FFFFFF;
     border-top:1px solid rgba(0,0,0,.06);
     z-index:60;
-    overflow:hidden;       /* hide any sub-pixel rendering at edges */
+    overflow:hidden;
   }
   .nav-center .nav-link{
     color:#14100B;
     opacity:1;
     font-size:12px;
     letter-spacing:.22em;
+    transition:none !important;
   }
-  /* Give the page some breathing room above the fixed bottom bar */
-  body{ padding-bottom:80px; overscroll-behavior-y:none; }
-  html, body{ -webkit-overflow-scrolling:auto; }
+  /* Page has breathing room above the bottom bar */
+  body{ padding-bottom:80px; overscroll-behavior:none; }
+  html{ overscroll-behavior:none; -webkit-overflow-scrolling:auto; }
   .site-footer{ margin-bottom:0; padding-bottom:140px; }
 }
 
