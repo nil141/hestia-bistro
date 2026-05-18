@@ -991,7 +991,7 @@ button{ font-family:inherit; cursor:pointer; }
    RESPONSIVE
    ──────────────────────────────────────────────────────── */
 @media (max-width: 768px){
-  /* Mobile nav: RESERVAR / CARTA / FAQ — clean fixed bottom, no tricks */
+  /* Mobile nav: RESERVAR / CARTA / FAQ — fixed bottom, JS nudges transform when needed */
   .nav-center{
     position:fixed;
     top:auto;
@@ -999,13 +999,13 @@ button{ font-family:inherit; cursor:pointer; }
     left:0;
     right:0;
     width:100%;
-    transform:none;
-    -webkit-transform:none;
+    /* No translate/will-change — but allow JS to set transform for viewport tracking */
     will-change:auto;
     transition:none !important;
+    display:flex;
     justify-content:center;
+    align-items:center;
     gap:34px;
-    /* Safe area for iPhone notch/home bar; large enough to absorb iOS bounce */
     padding-top:18px;
     padding-bottom:max(22px, calc(18px + env(safe-area-inset-bottom)));
     padding-left:20px;
@@ -1019,6 +1019,9 @@ button{ font-family:inherit; cursor:pointer; }
     opacity:1;
     font-size:12px;
     letter-spacing:.22em;
+    text-transform:uppercase;
+    font-weight:500;
+    font-family:var(--font-sans);
     transition:none !important;
   }
   body{ padding-bottom:90px; overscroll-behavior:none; }

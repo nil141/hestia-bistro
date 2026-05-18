@@ -1,50 +1,28 @@
 /* Hestia Bistró — small UX scripts */
 
-// Mobile bottom nav: anchor it to the visualViewport bottom (iOS Safari address-bar fix)
+// Mobile bottom nav: nudge with translateY to follow iOS Safari address-bar transitions
+// The nav stays position:fixed (CSS) — JS only adds a transform offset when needed.
 (function mobileNavAnchor(){
   const nav = document.querySelector('.nav-center');
   if (!nav || !window.visualViewport) return;
 
   const MOBILE_MAX = 768;
-  const originalParent = nav.parentElement;
-  const originalNextSibling = nav.nextElementSibling;
-  let movedToBody = false;
 
   function shouldActivate(){
     return window.innerWidth <= MOBILE_MAX;
   }
 
-  function ensureLocation(activate){
-    if (activate && !movedToBody){
-      document.body.appendChild(nav);
-      movedToBody = true;
-    } else if (!activate && movedToBody){
-      // Restore to original DOM position
-      if (originalNextSibling) originalParent.insertBefore(nav, originalNextSibling);
-      else originalParent.appendChild(nav);
-      nav.removeAttribute('style');
-      movedToBody = false;
-    }
-  }
-
   function update(){
     if (!shouldActivate()){
-      ensureLocation(false);
+      nav.style.transform = '';
       return;
     }
-    ensureLocation(true);
     const vv = window.visualViewport;
-    const navH = nav.offsetHeight;
-    // Position in document coordinates so it tracks scroll naturally,
-    // pinned to the bottom of the current visual viewport
-    const top = (window.scrollY + vv.offsetTop + vv.height) - navH;
-    nav.style.position = 'absolute';
-    nav.style.top = top + 'px';
-    nav.style.left = '0';
-    nav.style.right = '0';
-    nav.style.bottom = 'auto';
-    nav.style.transform = 'none';
-    nav.style.zIndex = '60';
+    // Distance between the layout viewport bottom and the visual viewport bottom.
+    // When iOS Safari's address bar collapses/expands, this delta becomes non-zero.
+    const delta = window.innerHeight - (vv.offsetTop + vv.height);
+    // Translate the fixed nav UP by `delta` so it follows the visible viewport bottom
+    nav.style.transform = `translateY(${-delta}px)`;
   }
 
   let rafId = null;
@@ -61,7 +39,6 @@
   window.addEventListener('scroll', onChange, { passive: true });
   window.addEventListener('resize', onChange);
   window.addEventListener('orientationchange', onChange);
-  // Initial position
   requestAnimationFrame(update);
 })();
 
