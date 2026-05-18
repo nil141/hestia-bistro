@@ -1,5 +1,62 @@
 /* Hestia Bistró — small UX scripts */
 
+// Mobile bottom nav: anchor it to the visualViewport bottom (iOS Safari address-bar fix)
+(function mobileNavAnchor(){
+  const nav = document.querySelector('.nav-center');
+  if (!nav || !window.visualViewport) return;
+
+  const MOBILE_MAX = 768;
+  let active = false;
+
+  function shouldActivate(){
+    return window.innerWidth <= MOBILE_MAX;
+  }
+
+  function update(){
+    if (!shouldActivate()){
+      if (active){
+        nav.style.position = '';
+        nav.style.top = '';
+        nav.style.left = '';
+        nav.style.right = '';
+        nav.style.bottom = '';
+        nav.style.transform = '';
+        active = false;
+      }
+      return;
+    }
+    const vv = window.visualViewport;
+    const navH = nav.offsetHeight;
+    // Position relative to the document scroll, anchored to the bottom of the visual viewport
+    const top = (window.scrollY + vv.height + vv.offsetTop) - navH;
+    nav.style.position = 'absolute';
+    nav.style.top = top + 'px';
+    nav.style.left = '0';
+    nav.style.right = '0';
+    nav.style.bottom = 'auto';
+    nav.style.transform = 'none';
+    active = true;
+  }
+
+  // Use rAF to keep position in sync with the viewport during scroll
+  let rafId = null;
+  function onChange(){
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      rafId = null;
+      update();
+    });
+  }
+
+  window.visualViewport.addEventListener('resize', onChange);
+  window.visualViewport.addEventListener('scroll', onChange);
+  window.addEventListener('scroll', onChange, { passive: true });
+  window.addEventListener('resize', onChange);
+  window.addEventListener('orientationchange', onChange);
+  update();
+})();
+
+
 // Hero scroll-fade: background photo + wordmark fade together on scroll
 (function heroFade(){
   const photo = document.querySelector('.hero-photo');
