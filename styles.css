@@ -1138,12 +1138,14 @@ button{ font-family:inherit; cursor:pointer; }
 
   .full-image-wrap{ padding:0 16px; margin:24px auto 60px; }
   .full-image-wrap .accent-rule{
+    /* line ABOVE the image (in the gap between button and image) */
+    top:-12px;
+    bottom:auto;
+    left:16px;
     right:16px;
-    bottom:80px;     /* moved up */
-    left:25%;        /* starts further to the left */
     width:auto;
   }
-  .full-image-wrap.reverse .accent-rule{ left:16px; right:auto; width:50%; }
+  .full-image-wrap.reverse .accent-rule{ left:16px; right:16px; width:auto; }
   .full-image{ width:100%; aspect-ratio:4/3; }
 
   .bio-row{ grid-template-columns:1fr; gap:36px; padding:0 22px; margin-bottom:70px; }
