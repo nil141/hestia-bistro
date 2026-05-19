@@ -1049,8 +1049,8 @@ button{ font-family:inherit; cursor:pointer; }
   .hero-card{ left:22px; right:22px; bottom:40px; width:auto; }
   .hero-bottom{ left:22px; right:22px; bottom:14px; font-size:9.5px; }
 
-  .block-split{ padding:90px 22px 30px; }
-  .block-split-grid{ grid-template-columns:1fr; gap:36px; }
+  .block-split{ padding:30px 22px 30px; }
+  .block-split-grid{ grid-template-columns:1fr; gap:14px; }
   .block-split-body{ max-width:none; }
 
   /* Mobile: section title on a single line ("EL RESTAURANTE" together) */
