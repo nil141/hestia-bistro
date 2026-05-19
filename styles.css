@@ -34,7 +34,7 @@
 
   /* OPCIÓN 4 — sustitución directa: blanco → cream, gris → beige cálido */
   --bg:        #FAF6EC;      /* sustituye al blanco, mismo nivel pero cream cálido */
-  --bg-2:      #ECDDB8;      /* mismo crema que --bg pero más fuerte/saturado */
+  --bg-2:      #FAF6EC;      /* mismo crema que --bg — Propuesta/Territorio igual que Restaurante/Chef */
   --bg-3:      #EDE5D3;
   --ink:       #14100B;
   --ink-soft:  #443A2C;
