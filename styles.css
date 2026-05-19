@@ -34,7 +34,7 @@
 
   /* OPCIÓN 4 — sustitución directa: blanco → cream, gris → beige cálido */
   --bg:        #FAF6EC;      /* sustituye al blanco, mismo nivel pero cream cálido */
-  --bg-2:      #DCC9A8;      /* sustituye al gris, jugando con el marrón (beige claro) */
+  --bg-2:      #B09680;      /* marrón cálido suave, claramente marrón pero con poco tono */
   --bg-3:      #EDE5D3;
   --ink:       #14100B;
   --ink-soft:  #443A2C;
