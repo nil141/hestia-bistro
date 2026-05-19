@@ -1095,6 +1095,12 @@ button{ font-family:inherit; cursor:pointer; }
   .chef-body{ font-size:15px; line-height:27px; }
   .chef-body p{ margin:0 0 18px; }
 
+  /* TERRITORIO image: align with the button above (no extra padding inside section) */
+  .territorio-image-wrap{
+    padding:0;
+    margin:30px 0 0;
+  }
+
   /* PLATOS · CARROUSEL mobile: compact, square slides, line near top */
   .dishes-carousel{ padding:50px 16px 60px; }
   .dishes-wrap{ padding-left:0; }
