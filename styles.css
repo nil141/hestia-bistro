@@ -1095,6 +1095,20 @@ button{ font-family:inherit; cursor:pointer; }
   .chef-body{ font-size:15px; line-height:27px; }
   .chef-body p{ margin:0 0 18px; }
 
+  /* PLATOS · CARROUSEL mobile: compact, square slides, line near top */
+  .dishes-carousel{ padding:50px 16px 60px; }
+  .dishes-wrap{ padding-left:0; }
+  .dishes-rule{
+    left:0;
+    right:0;
+    top:36px;
+  }
+  .dishes-track{ gap:14px; }
+  .dish-slide{
+    flex:0 0 calc(50% - 7px);
+    aspect-ratio:1/1;
+  }
+
   .full-image-wrap{ padding:0 16px; margin:24px auto 60px; }
   .full-image-wrap .accent-rule{
     right:16px;
