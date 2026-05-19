@@ -1136,16 +1136,16 @@ button{ font-family:inherit; cursor:pointer; }
     aspect-ratio:3/4;
   }
 
-  .full-image-wrap{ padding:0 16px; margin:24px auto 60px; }
+  .full-image-wrap{ padding:0 16px; margin:24px auto 60px; overflow:visible; }
   .full-image-wrap .accent-rule{
-    /* line ABOVE the image (in the gap between button and image) */
-    top:-12px;
-    bottom:auto;
-    left:16px;
-    right:16px;
+    /* Line crosses the bottom-right inside the image and extends out to page edge */
+    top:auto;
+    bottom:50px;
+    left:55%;
+    right:-16px;
     width:auto;
   }
-  .full-image-wrap.reverse .accent-rule{ left:16px; right:16px; width:auto; }
+  .full-image-wrap.reverse .accent-rule{ left:-16px; right:55%; width:auto; }
   .full-image{ width:100%; aspect-ratio:4/3; }
 
   .bio-row{ grid-template-columns:1fr; gap:36px; padding:0 22px; margin-bottom:70px; }
