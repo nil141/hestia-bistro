@@ -21,27 +21,26 @@
 
 :root{
   /* Brand tokens (sampled from logo) */
-  --hueso:   #F0E7D2;
-  --crema:   #E2D5B5;
-  --crema-2: #C9B68E;
-  --espresso:#2A1F17;
-  --espresso-deep:#1B130E;
-  --espresso-soft:#3A2C20;
-  --sepia:   #6B5847;
-  --cobre:   #A77E46;
-  --cobre-2: #8B6735;
+  --hueso:   #E8DFCD;
+  --crema:   #D9C9A8;
+  --crema-2: #C7B58E;
+  --tinta:   #15100A;
+  --tinta-2: #1F1812;
+  --tinta-3: #2A1F18;
+  --sepia:   #6B5A47;
+  --cobre:   #A87E48;
+  --cobre-2: #8A6738;
   --ambar:   #C99B5C;
 
-  /* OPCIÓN 2 — más marrón en juego: cream cálido + secciones espresso alternadas */
-  --bg:        #F2E8D2;      /* cream más saturado, beige cálido */
-  --bg-2:      #2A1F17;      /* DARK espresso para Nuestra Propuesta + Igualada */
-  --bg-3:      #E6DABE;      /* cream-darker */
-  --bg-dark:   #1F1610;      /* espresso aún más oscuro para footer */
-  --ink:       #1F140C;      /* espresso casi negro para texto sobre cream */
-  --ink-soft:  #4A3A2A;
-  --ink-quiet: #6B5A47;
-  --rule:      rgba(31,20,12,.18);
-  --rule-2:    rgba(31,20,12,.08);
+  /* White canvas, dark ink — Aleia-style light theme */
+  --bg:        #FFFFFF;
+  --bg-2:      #F7F2E8;
+  --bg-3:      #EDE5D3;
+  --ink:       #14100B;
+  --ink-soft:  #443A2C;
+  --ink-quiet: #6B5C46;
+  --rule:      rgba(20,16,11,.14);
+  --rule-2:    rgba(20,16,11,.06);
   --accent:    var(--cobre);
   --accent-2:  var(--cobre-2);
 
@@ -410,10 +409,10 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:16px;
   line-height:29px;
-  color:var(--ink);
+  color:rgb(33,37,41);
   font-weight:300;
 }
-.block-split-body p{ margin:0 0 28px; color:var(--ink); }
+.block-split-body p{ margin:0 0 28px; color:rgb(33,37,41); }
 .block-split-body p:last-of-type{ margin-bottom:14px; }
 .block-split-body .btn{ margin-top:0; }
 .block-split-body strong,
@@ -670,8 +669,8 @@ button{ font-family:inherit; cursor:pointer; }
    FOOTER  (Aleia-style: white bg · 4 columns)
    ──────────────────────────────────────────────────────── */
 .site-footer{
-  background:var(--bg-dark);     /* brand espresso */
-  color:var(--hueso);            /* cream text */
+  background:#FFFFFF;
+  color:rgb(33,37,41);
   padding:120px 130px 100px;
   position:relative;
 }
@@ -697,7 +696,7 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:14px;
   line-height:24px;
-  color:var(--hueso);
+  color:rgb(33,37,41);
   font-weight:300;
   margin:0;
 }
@@ -726,14 +725,10 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:16px;
   line-height:29px;
-  color:var(--hueso);
+  color:rgb(33,37,41);
   font-weight:300;
   margin:0;
 }
-.footer-address p a,
-.footer-hours p a{ color:var(--hueso); }
-.footer-address p a:hover,
-.footer-hours p a:hover{ color:var(--accent); }
 .footer-hours strong{
   display:inline-block;
   font-weight:600;
@@ -754,7 +749,7 @@ button{ font-family:inherit; cursor:pointer; }
   white-space:nowrap;
 }
 .footer-links a{
-  color:var(--hueso);
+  color:rgb(33,37,41);
   font-weight:300;
   text-decoration:none;
   transition:color .25s ease;
@@ -762,7 +757,7 @@ button{ font-family:inherit; cursor:pointer; }
 .footer-links a:hover{ color:var(--accent); }
 .footer-links li.spacer{ height:14px; }
 .footer-links li.footer-credit{
-  color:var(--hueso);
+  color:rgb(33,37,41);
   font-weight:300;
 }
 .footer-links li.footer-credit a{
@@ -777,19 +772,8 @@ button{ font-family:inherit; cursor:pointer; }
 .proposal-section{
   padding:220px 130px 220px;
   position:relative;
-  background:var(--bg-2);          /* espresso dark */
-  color:var(--hueso);
+  background:#F2F2F2;
 }
-/* Text colors inside dark proposal/territorio sections */
-.proposal-section .section-title span{ color:var(--hueso); }
-.proposal-section .proposal-text,
-.proposal-section .proposal-subtext,
-.proposal-section strong{ color:var(--hueso); }
-.proposal-section .menu-line-name{ color:var(--hueso); }
-.proposal-section .menu-line{ border-bottom-color:rgba(167,126,70,.55); }
-.proposal-section .proposal-divider{ border-top-color:var(--accent); }
-.proposal-section .btn-amber{ background:var(--cobre); border-color:var(--cobre); color:var(--espresso); }
-.proposal-section .btn-amber:hover{ background:var(--hueso); border-color:var(--hueso); color:var(--espresso); }
 .proposal-wrap{
   max-width:1240px;
   margin:0 auto;
@@ -812,7 +796,7 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:16px;
   line-height:29px;
-  color:var(--ink);
+  color:rgb(33,37,41);
   font-weight:300;
   margin:0;
 }
@@ -842,7 +826,7 @@ button{ font-family:inherit; cursor:pointer; }
   text-transform:uppercase;
   font-weight:400;
 }
-.menu-line-name{ color:var(--ink); }
+.menu-line-name{ color:rgb(33,37,41); }
 .menu-line-price{ color:var(--accent); }
 
 .proposal-subheading{
@@ -858,7 +842,7 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:16px;
   line-height:29px;
-  color:var(--ink);
+  color:rgb(33,37,41);
   font-weight:300;
   margin:0 0 24px;
 }
@@ -985,11 +969,11 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:16px;
   line-height:29px;
-  color:var(--ink);
+  color:rgb(33,37,41);
   font-weight:300;
 }
-.chef-body p{ margin:0 0 22px; color:var(--ink); }
-.chef-body strong{ font-weight:600; color:var(--ink); }
+.chef-body p{ margin:0 0 22px; color:rgb(33,37,41); }
+.chef-body strong{ font-weight:600; color:rgb(33,37,41); }
 .chef-body .btn{ margin-top:14px; }
 
 
@@ -1190,7 +1174,7 @@ button{ font-family:inherit; cursor:pointer; }
   .footer-brand .footer-logo{ display:none; }
   .footer-tagline br{ display:none; }
   .footer-tagline a{ margin-left:6px; }
-  .footer-tagline a::before{ content:"· "; color:var(--hueso); }
+  .footer-tagline a::before{ content:"· "; color:rgb(33,37,41); }
 }
 
 @media (max-width: 560px){
