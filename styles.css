@@ -1169,6 +1169,12 @@ button{ font-family:inherit; cursor:pointer; }
 
   .site-footer{ padding:80px 22px 60px; }
   .footer-grid{ grid-template-columns: 1fr 1fr; gap:36px; }
+
+  /* Footer mobile: hide H logo + put tagline on one line */
+  .footer-brand .footer-logo{ display:none; }
+  .footer-tagline br{ display:none; }
+  .footer-tagline a{ margin-left:6px; }
+  .footer-tagline a::before{ content:"· "; color:rgb(33,37,41); }
 }
 
 @media (max-width: 560px){
