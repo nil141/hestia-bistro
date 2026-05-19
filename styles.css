@@ -32,16 +32,16 @@
   --cobre-2: #8B6735;
   --ambar:   #C99B5C;
 
-  /* Cream canvas, espresso ink — Hestia brand-aligned light theme */
-  --bg:        #FAF6EC;      /* warm cream (was pure white) */
-  --bg-2:      #F1E9D9;      /* deeper cream for proposal/territorio (was cool grey) */
+  /* OPCIÓN 2 — más marrón en juego: cream cálido + secciones espresso alternadas */
+  --bg:        #F2E8D2;      /* cream más saturado, beige cálido */
+  --bg-2:      #2A1F17;      /* DARK espresso para Nuestra Propuesta + Igualada */
   --bg-3:      #E6DABE;      /* cream-darker */
-  --bg-dark:   #2A1F17;      /* brand espresso for footer */
-  --ink:       #261B14;      /* espresso brown text (was near-black) */
-  --ink-soft:  #4A3A2A;      /* warm brown soft */
-  --ink-quiet: #6B5A47;      /* sepia */
-  --rule:      rgba(38,27,20,.14);
-  --rule-2:    rgba(38,27,20,.06);
+  --bg-dark:   #1F1610;      /* espresso aún más oscuro para footer */
+  --ink:       #1F140C;      /* espresso casi negro para texto sobre cream */
+  --ink-soft:  #4A3A2A;
+  --ink-quiet: #6B5A47;
+  --rule:      rgba(31,20,12,.18);
+  --rule-2:    rgba(31,20,12,.08);
   --accent:    var(--cobre);
   --accent-2:  var(--cobre-2);
 
@@ -777,8 +777,19 @@ button{ font-family:inherit; cursor:pointer; }
 .proposal-section{
   padding:220px 130px 220px;
   position:relative;
-  background:var(--bg-2);
+  background:var(--bg-2);          /* espresso dark */
+  color:var(--hueso);
 }
+/* Text colors inside dark proposal/territorio sections */
+.proposal-section .section-title span{ color:var(--hueso); }
+.proposal-section .proposal-text,
+.proposal-section .proposal-subtext,
+.proposal-section strong{ color:var(--hueso); }
+.proposal-section .menu-line-name{ color:var(--hueso); }
+.proposal-section .menu-line{ border-bottom-color:rgba(167,126,70,.55); }
+.proposal-section .proposal-divider{ border-top-color:var(--accent); }
+.proposal-section .btn-amber{ background:var(--cobre); border-color:var(--cobre); color:var(--espresso); }
+.proposal-section .btn-amber:hover{ background:var(--hueso); border-color:var(--hueso); color:var(--espresso); }
 .proposal-wrap{
   max-width:1240px;
   margin:0 auto;
