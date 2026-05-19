@@ -21,26 +21,27 @@
 
 :root{
   /* Brand tokens (sampled from logo) */
-  --hueso:   #E8DFCD;
-  --crema:   #D9C9A8;
-  --crema-2: #C7B58E;
-  --tinta:   #15100A;
-  --tinta-2: #1F1812;
-  --tinta-3: #2A1F18;
-  --sepia:   #6B5A47;
-  --cobre:   #A87E48;
-  --cobre-2: #8A6738;
+  --hueso:   #F0E7D2;
+  --crema:   #E2D5B5;
+  --crema-2: #C9B68E;
+  --espresso:#2A1F17;
+  --espresso-deep:#1B130E;
+  --espresso-soft:#3A2C20;
+  --sepia:   #6B5847;
+  --cobre:   #A77E46;
+  --cobre-2: #8B6735;
   --ambar:   #C99B5C;
 
-  /* White canvas, dark ink — Aleia-style light theme */
-  --bg:        #FFFFFF;
-  --bg-2:      #F7F2E8;
-  --bg-3:      #EDE5D3;
-  --ink:       #14100B;
-  --ink-soft:  #443A2C;
-  --ink-quiet: #6B5C46;
-  --rule:      rgba(20,16,11,.14);
-  --rule-2:    rgba(20,16,11,.06);
+  /* Cream canvas, espresso ink — Hestia brand-aligned light theme */
+  --bg:        #FAF6EC;      /* warm cream (was pure white) */
+  --bg-2:      #F1E9D9;      /* deeper cream for proposal/territorio (was cool grey) */
+  --bg-3:      #E6DABE;      /* cream-darker */
+  --bg-dark:   #2A1F17;      /* brand espresso for footer */
+  --ink:       #261B14;      /* espresso brown text (was near-black) */
+  --ink-soft:  #4A3A2A;      /* warm brown soft */
+  --ink-quiet: #6B5A47;      /* sepia */
+  --rule:      rgba(38,27,20,.14);
+  --rule-2:    rgba(38,27,20,.06);
   --accent:    var(--cobre);
   --accent-2:  var(--cobre-2);
 
@@ -409,10 +410,10 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:16px;
   line-height:29px;
-  color:rgb(33,37,41);
+  color:var(--ink);
   font-weight:300;
 }
-.block-split-body p{ margin:0 0 28px; color:rgb(33,37,41); }
+.block-split-body p{ margin:0 0 28px; color:var(--ink); }
 .block-split-body p:last-of-type{ margin-bottom:14px; }
 .block-split-body .btn{ margin-top:0; }
 .block-split-body strong,
@@ -669,8 +670,8 @@ button{ font-family:inherit; cursor:pointer; }
    FOOTER  (Aleia-style: white bg · 4 columns)
    ──────────────────────────────────────────────────────── */
 .site-footer{
-  background:#FFFFFF;
-  color:rgb(33,37,41);
+  background:var(--bg-dark);     /* brand espresso */
+  color:var(--hueso);            /* cream text */
   padding:120px 130px 100px;
   position:relative;
 }
@@ -696,7 +697,7 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:14px;
   line-height:24px;
-  color:rgb(33,37,41);
+  color:var(--hueso);
   font-weight:300;
   margin:0;
 }
@@ -725,10 +726,14 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:16px;
   line-height:29px;
-  color:rgb(33,37,41);
+  color:var(--hueso);
   font-weight:300;
   margin:0;
 }
+.footer-address p a,
+.footer-hours p a{ color:var(--hueso); }
+.footer-address p a:hover,
+.footer-hours p a:hover{ color:var(--accent); }
 .footer-hours strong{
   display:inline-block;
   font-weight:600;
@@ -749,7 +754,7 @@ button{ font-family:inherit; cursor:pointer; }
   white-space:nowrap;
 }
 .footer-links a{
-  color:rgb(33,37,41);
+  color:var(--hueso);
   font-weight:300;
   text-decoration:none;
   transition:color .25s ease;
@@ -757,7 +762,7 @@ button{ font-family:inherit; cursor:pointer; }
 .footer-links a:hover{ color:var(--accent); }
 .footer-links li.spacer{ height:14px; }
 .footer-links li.footer-credit{
-  color:rgb(33,37,41);
+  color:var(--hueso);
   font-weight:300;
 }
 .footer-links li.footer-credit a{
@@ -772,7 +777,7 @@ button{ font-family:inherit; cursor:pointer; }
 .proposal-section{
   padding:220px 130px 220px;
   position:relative;
-  background:#F2F2F2;
+  background:var(--bg-2);
 }
 .proposal-wrap{
   max-width:1240px;
@@ -796,7 +801,7 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:16px;
   line-height:29px;
-  color:rgb(33,37,41);
+  color:var(--ink);
   font-weight:300;
   margin:0;
 }
@@ -826,7 +831,7 @@ button{ font-family:inherit; cursor:pointer; }
   text-transform:uppercase;
   font-weight:400;
 }
-.menu-line-name{ color:rgb(33,37,41); }
+.menu-line-name{ color:var(--ink); }
 .menu-line-price{ color:var(--accent); }
 
 .proposal-subheading{
@@ -842,7 +847,7 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:16px;
   line-height:29px;
-  color:rgb(33,37,41);
+  color:var(--ink);
   font-weight:300;
   margin:0 0 24px;
 }
@@ -969,11 +974,11 @@ button{ font-family:inherit; cursor:pointer; }
   font-family:var(--font-sans);
   font-size:16px;
   line-height:29px;
-  color:rgb(33,37,41);
+  color:var(--ink);
   font-weight:300;
 }
-.chef-body p{ margin:0 0 22px; color:rgb(33,37,41); }
-.chef-body strong{ font-weight:600; color:rgb(33,37,41); }
+.chef-body p{ margin:0 0 22px; color:var(--ink); }
+.chef-body strong{ font-weight:600; color:var(--ink); }
 .chef-body .btn{ margin-top:14px; }
 
 
@@ -1174,7 +1179,7 @@ button{ font-family:inherit; cursor:pointer; }
   .footer-brand .footer-logo{ display:none; }
   .footer-tagline br{ display:none; }
   .footer-tagline a{ margin-left:6px; }
-  .footer-tagline a::before{ content:"· "; color:rgb(33,37,41); }
+  .footer-tagline a::before{ content:"· "; color:var(--hueso); }
 }
 
 @media (max-width: 560px){
