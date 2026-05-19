@@ -1055,9 +1055,10 @@ button{ font-family:inherit; cursor:pointer; }
 
   /* Mobile: section title on a single line ("EL RESTAURANTE" together) + smaller */
   .section-title span{ display:inline; }
+  .display-title.section-title,
   .section-title{
     line-height:1;
-    font-size:clamp(32px, 7.5vw, 60px);
+    font-size:26px !important;
   }
 
   .full-image-wrap{ padding:0 22px; margin:24px auto 60px; }
