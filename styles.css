@@ -33,7 +33,7 @@
   --ambar:   #C99B5C;
 
   /* White canvas, dark ink — Aleia-style light theme */
-  --bg:        #FFFFFF;
+  --bg:        #F1ECE1;
   --bg-2:      #F7F2E8;
   --bg-3:      #EDE5D3;
   --ink:       #14100B;
@@ -89,7 +89,7 @@ button{ font-family:inherit; cursor:pointer; }
   letter-spacing:-.015em;
   line-height:.95;
   margin:0;
-  color:var(--ink);
+  color:#241E13;
   font-size:clamp(54px, 7vw, 110px);
 }
 .display-title span{ font-weight:300; }
@@ -97,7 +97,7 @@ button{ font-family:inherit; cursor:pointer; }
   font-style:italic;
   font-weight:300;
   display:block;
-  color:var(--ink);
+  color:#241E13;
 }
 .display-title.center{ text-align:center; }
 
@@ -115,7 +115,7 @@ button{ font-family:inherit; cursor:pointer; }
   display:block;
   font-weight:500;
   font-style:normal;
-  color:var(--ink);
+  color:#241E13;
 }
 
 .brand-wordmark{
@@ -157,7 +157,7 @@ button{ font-family:inherit; cursor:pointer; }
   border-color:#E2B974;
 }
 .btn-amber:hover{
-  background:#FFFFFF;
+  background:transparent;
   color:#000;
   border-color:#E2B974;
 }
@@ -323,8 +323,8 @@ button{ font-family:inherit; cursor:pointer; }
   right:0;
   bottom:0;
   width:100%;
-  height:76vh;
-  background:#F2F2F2;
+  height:63.3vh;
+  background:var(--bg);
   z-index:0;
 }
 
@@ -337,7 +337,7 @@ button{ font-family:inherit; cursor:pointer; }
   margin:0;
   padding:0;
   width:100%;
-  height:76vh;
+  height:63.3vh;
   z-index:1;
   overflow:hidden;
 }
@@ -345,7 +345,7 @@ button{ font-family:inherit; cursor:pointer; }
   position:absolute; inset:0;
   background:
     linear-gradient(180deg, rgba(17,9,6,0) 0%, rgba(17,9,6,.15) 65%, rgba(17,9,6,.5) 100%),
-    url('assets/hero.jpg?v=2') center/cover no-repeat #110906;
+    url('assets/hero.jpg?v=3') center/cover no-repeat #110906;
 }
 .hero-photo-grain{
   position:absolute; inset:0;
@@ -669,7 +669,7 @@ button{ font-family:inherit; cursor:pointer; }
    FOOTER  (Aleia-style: white bg · 4 columns)
    ──────────────────────────────────────────────────────── */
 .site-footer{
-  background:#FFFFFF;
+  background:var(--bg);
   color:rgb(33,37,41);
   padding:120px 130px 100px;
   position:relative;
@@ -772,7 +772,7 @@ button{ font-family:inherit; cursor:pointer; }
 .proposal-section{
   padding:220px 130px 220px;
   position:relative;
-  background:#F2F2F2;
+  background:#EEE8D9;
 }
 .proposal-wrap{
   max-width:1240px;
@@ -853,7 +853,7 @@ button{ font-family:inherit; cursor:pointer; }
    ──────────────────────────────────────────────────────── */
 .dishes-carousel{
   padding:180px 130px;
-  background:#FFFFFF;
+  background:var(--bg);
   position:relative;
 }
 .dishes-wrap{
@@ -927,7 +927,7 @@ button{ font-family:inherit; cursor:pointer; }
    ──────────────────────────────────────────────────────── */
 .chef-section{
   padding:180px 130px;
-  background:#FFFFFF;
+  background:var(--bg);
   position:relative;
 }
 .chef-wrap{
@@ -1046,6 +1046,7 @@ button{ font-family:inherit; cursor:pointer; }
   .nav-left{ gap:20px; }
 
   .hero{ padding:120px 22px 60px; min-height:90vh; }
+  .hero-photo, .hero-backdrop{ height:76vh; }
   .hero-card{ left:22px; right:22px; bottom:40px; width:auto; }
   .hero-bottom{ left:22px; right:22px; bottom:14px; font-size:9.5px; }
 

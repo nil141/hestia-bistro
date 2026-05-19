@@ -54,9 +54,11 @@
   function update(){
     const heroH = hero.offsetHeight;
     const scrolled = Math.max(0, window.scrollY);
-    // Fully visible at top, fully transparent at ~70% of hero height
-    const fadeDistance = heroH * 0.7;
-    const opacity = Math.max(0, Math.min(1, 1 - scrolled / fadeDistance));
+    // Fade starts at 35% of hero height, ends at 85% — la imagen aguanta visible un poco más
+    const fadeStart = heroH * 0.20;
+    const fadeEnd   = heroH * 1.00;
+    const t = (scrolled - fadeStart) / (fadeEnd - fadeStart);
+    const opacity = Math.max(0, Math.min(1, 1 - t));
     if (photo) photo.style.opacity = opacity;
     if (wordmark) wordmark.style.opacity = opacity;
     ticking = false;
