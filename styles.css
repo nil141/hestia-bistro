@@ -1106,7 +1106,7 @@ button{ font-family:inherit; cursor:pointer; }
   .dishes-track{ gap:14px; }
   .dish-slide{
     flex:0 0 calc(50% - 7px);
-    aspect-ratio:1/1;
+    aspect-ratio:3/4;
   }
 
   .full-image-wrap{ padding:0 16px; margin:24px auto 60px; }
