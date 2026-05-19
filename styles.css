@@ -1122,13 +1122,15 @@ button{ font-family:inherit; cursor:pointer; }
   .territorio-intro{ margin-top:20px; }
   .proposal-text{ font-size:15px; line-height:27px; }
 
-  /* PLATOS · CARROUSEL mobile: compact, square slides, line near top */
-  .dishes-carousel{ padding:50px 16px 60px; }
+  /* PLATOS · CARROUSEL mobile: compact, slides, line crosses middle full width */
+  .dishes-carousel{ padding:50px 16px 60px; overflow:hidden; }
   .dishes-wrap{ padding-left:0; }
   .dishes-rule{
-    left:0;
-    right:0;
-    top:36px;
+    left:-16px;          /* extends past section padding to viewport edge */
+    right:-16px;         /* same on the right */
+    top:50%;             /* vertically centered on the photos */
+    transform:translateY(-50%);
+    bottom:auto;
   }
   .dishes-track{ gap:14px; }
   .dish-slide{
