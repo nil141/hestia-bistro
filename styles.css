@@ -32,11 +32,11 @@
   --cobre-2: #8A6738;
   --ambar:   #C99B5C;
 
-  /* OPCIÓN 3 — mismo balance tonal que pre-opciones, hue cálido/marca */
-  --bg:        #FBF8F2;      /* casi blanco con tinte cálido (era #FFFFFF) */
-  --bg-2:      #EEE9DD;      /* mismo nivel claro pero beige cálido (era gris #F2F2F2) */
-  --bg-3:      #E6DDC9;
-  --ink:       #1A130C;      /* mismo casi-negro pero con calidez (era #14100B) */
+  /* OPCIÓN 3 — cream cálido visible (no blanco), todas las secciones cohesionadas */
+  --bg:        #F4EDDC;      /* cream cálido claramente visible */
+  --bg-2:      #E8DEC4;      /* cream más profundo para secciones diferenciadas */
+  --bg-3:      #DDD0B0;
+  --ink:       #1A130C;
   --ink-soft:  #4D4234;
   --ink-quiet: #6B5C46;
   --rule:      rgba(26,19,12,.14);
@@ -669,7 +669,7 @@ button{ font-family:inherit; cursor:pointer; }
    FOOTER  (Aleia-style: white bg · 4 columns)
    ──────────────────────────────────────────────────────── */
 .site-footer{
-  background:#FFFFFF;
+  background:var(--bg);
   color:var(--ink);
   padding:120px 130px 100px;
   position:relative;
@@ -853,7 +853,7 @@ button{ font-family:inherit; cursor:pointer; }
    ──────────────────────────────────────────────────────── */
 .dishes-carousel{
   padding:180px 130px;
-  background:#FFFFFF;
+  background:var(--bg);
   position:relative;
 }
 .dishes-wrap{
@@ -927,7 +927,7 @@ button{ font-family:inherit; cursor:pointer; }
    ──────────────────────────────────────────────────────── */
 .chef-section{
   padding:180px 130px;
-  background:#FFFFFF;
+  background:var(--bg);
   position:relative;
 }
 .chef-wrap{
