@@ -1095,13 +1095,17 @@ button{ font-family:inherit; cursor:pointer; }
   .chef-body{ font-size:15px; line-height:27px; }
   .chef-body p{ margin:0 0 18px; }
 
-  /* TERRITORIO image: align with button left, narrower than full width */
+  /* TERRITORIO image: align LEFT with the El Territorio button above it */
   .territorio-image-wrap{
     padding:0;
     margin:24px 0 0;
+    display:block;                /* override desktop flex */
+    box-sizing:border-box;
   }
   .territorio-image-wrap .full-image{
     width:86%;
+    margin:0;                     /* anchored to wrap left = button left */
+    flex:none;
   }
   .territorio-image-wrap .accent-rule{
     right:0;
