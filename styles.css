@@ -1013,6 +1013,18 @@ button{ font-family:inherit; cursor:pointer; }
     background:#FFFFFF;
     border-top:1px solid rgba(0,0,0,.06);
     z-index:60;
+    overflow:visible;
+  }
+  /* Solid white extension below the nav: covers any iOS scroll-lag gap */
+  .nav-center::after{
+    content:"";
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    height:200px;
+    background:#FFFFFF;
+    pointer-events:none;
   }
   .nav-center .nav-link{
     color:#14100B;
