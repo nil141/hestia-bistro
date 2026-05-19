@@ -1097,15 +1097,20 @@ button{ font-family:inherit; cursor:pointer; }
 
   /* TERRITORIO image: align LEFT with the El Territorio button above it */
   .territorio-image-wrap{
-    padding:0;
-    margin:24px 0 0;
-    display:block;                /* override desktop flex */
+    padding:0 !important;
+    margin:24px 0 0 0 !important;
+    display:block !important;
+    max-width:none !important;
+    width:100% !important;
     box-sizing:border-box;
   }
   .territorio-image-wrap .full-image{
-    width:86%;
-    margin:0;                     /* anchored to wrap left = button left */
-    flex:none;
+    width:86% !important;
+    margin-left:0 !important;
+    margin-right:auto !important;
+    display:block !important;
+    position:relative !important;
+    flex:none !important;
   }
   .territorio-image-wrap .accent-rule{
     right:0;
