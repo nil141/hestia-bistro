@@ -1,46 +1,6 @@
 /* Hestia Bistró — small UX scripts */
 
-// Mobile bottom nav: nudge with translateY to follow iOS Safari address-bar transitions
-// The nav stays position:fixed (CSS) — JS only adds a transform offset when needed.
-(function mobileNavAnchor(){
-  const nav = document.querySelector('.nav-center');
-  if (!nav || !window.visualViewport) return;
-
-  const MOBILE_MAX = 768;
-
-  function shouldActivate(){
-    return window.innerWidth <= MOBILE_MAX;
-  }
-
-  function update(){
-    if (!shouldActivate()){
-      nav.style.transform = '';
-      return;
-    }
-    const vv = window.visualViewport;
-    // Distance between the layout viewport bottom and the visual viewport bottom.
-    // When iOS Safari's address bar collapses/expands, this delta becomes non-zero.
-    const delta = window.innerHeight - (vv.offsetTop + vv.height);
-    // Translate the fixed nav UP by `delta` so it follows the visible viewport bottom
-    nav.style.transform = `translateY(${-delta}px)`;
-  }
-
-  let rafId = null;
-  function onChange(){
-    if (rafId) return;
-    rafId = requestAnimationFrame(() => {
-      rafId = null;
-      update();
-    });
-  }
-
-  window.visualViewport.addEventListener('resize', onChange);
-  window.visualViewport.addEventListener('scroll', onChange);
-  window.addEventListener('scroll', onChange, { passive: true });
-  window.addEventListener('resize', onChange);
-  window.addEventListener('orientationchange', onChange);
-  requestAnimationFrame(update);
-})();
+// (Mobile bottom nav is pure CSS now — no JS positioning hacks)
 
 
 // Hero scroll-fade: background photo + wordmark fade together on scroll
