@@ -345,7 +345,7 @@ button{ font-family:inherit; cursor:pointer; }
   position:absolute; inset:0;
   background:
     linear-gradient(180deg, rgba(17,9,6,0) 0%, rgba(17,9,6,.15) 65%, rgba(17,9,6,.5) 100%),
-    url('assets/hero.jpg?v=1') center/cover no-repeat #110906;
+    url('assets/hero.jpg?v=2') center/cover no-repeat #110906;
 }
 .hero-photo-grain{
   position:absolute; inset:0;
