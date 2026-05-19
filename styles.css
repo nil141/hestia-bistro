@@ -1053,9 +1053,18 @@ button{ font-family:inherit; cursor:pointer; }
   .block-split-grid{ grid-template-columns:1fr; gap:36px; }
   .block-split-body{ max-width:none; }
 
+  /* Mobile: section title on a single line ("EL RESTAURANTE" together) */
+  .section-title span{ display:inline; }
+  .section-title{ line-height:1; }
+
   .full-image-wrap{ padding:0 22px; margin:24px auto 60px; }
-  .full-image-wrap .accent-rule{ right:22px; bottom:14px; width:40%; }
-  .full-image-wrap.reverse .accent-rule{ left:22px; }
+  .full-image-wrap .accent-rule{
+    right:22px;
+    bottom:80px;     /* moved up */
+    left:25%;        /* starts further to the left */
+    width:auto;
+  }
+  .full-image-wrap.reverse .accent-rule{ left:22px; right:auto; width:50%; }
   .full-image{ width:100%; aspect-ratio:4/3; }
 
   .bio-row{ grid-template-columns:1fr; gap:36px; padding:0 22px; margin-bottom:70px; }
