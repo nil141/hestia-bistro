@@ -994,24 +994,10 @@ button{ font-family:inherit; cursor:pointer; }
   /* Mobile: bg al 50% (más claro que el 60% del desktop) */
   :root{ --bg: #F4EFE6; }
 
-  /* html bg en espresso para que iOS Safari nunca muestre crema entre el nav y el
-     borde inferior durante la transición de la barra de URL. */
+  /* html bg en espresso: visible solo en el área debajo del body (overscroll iOS).
+     El body sigue con su crema normal. Nada de background-attachment:fixed —
+     Android Chrome bloquea el scroll cuando eso está activo. */
   html{ background:#191514; }
-
-  /* Body bg como gradiente fijo al viewport: crema arriba, espresso en los últimos
-     70px. Con background-attachment:fixed el gradiente NO se mueve con el scroll,
-     siempre los últimos 70px del viewport son espresso — coincidiendo con el nav. */
-  body{
-    background:
-      linear-gradient(
-        to bottom,
-        var(--bg) 0,
-        var(--bg) calc(100% - 70px),
-        #191514 calc(100% - 70px),
-        #191514 100%
-      );
-    background-attachment: fixed;
-  }
 
   /* Mobile nav — copia exacta de Aleia: display:block + text-align center, sin flex */
   .nav-center{
