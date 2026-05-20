@@ -30,17 +30,6 @@
   update();
 })();
 
-// Header: solid background once scrolled past hero
-(function header(){
-  const h = document.getElementById('siteHeader');
-  if(!h) return;
-  const onScroll = () => {
-    h.classList.toggle('scrolled', window.scrollY > 60);
-  };
-  document.addEventListener('scroll', onScroll, { passive:true });
-  onScroll();
-})();
-
 // Language toggle (visual only, ES is the only one wired)
 (function lang(){
   const btns = document.querySelectorAll('.lang-btn');

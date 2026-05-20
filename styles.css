@@ -52,8 +52,8 @@
 
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; }
-html{ scroll-behavior:smooth; }
-body{ overflow-x:hidden; max-width:100vw; }
+html{ scroll-behavior:smooth; overflow-x:clip; }
+body{ overflow-x:clip; max-width:100vw; }
 
 body{
   background:var(--bg);
@@ -195,76 +195,79 @@ button{ font-family:inherit; cursor:pointer; }
 
 
 /* ────────────────────────────────────────────────────────
-   HEADER  (Aleia-style: small mark left · nav centered · lang right)
+   HEADER  (responsive: grid 3-col fluido en desktop · nav al bottom en mobile)
    ──────────────────────────────────────────────────────── */
 .site-header{
-  position:fixed; top:0; left:0; right:0; z-index:50;
+  position:fixed;
+  inset:0 0 auto 0;                  /* top:0 right:0 left:0 — sin bottom */
+  z-index:9900;                      /* igual que el nav inferior, siempre por encima del contenido */
   display:grid;
   grid-template-columns: 1fr auto 1fr;
   align-items:center;
-  padding:22px 40px;
+  /* Padding fluido: escala suave entre móvil y desktop sin breakpoints */
+  padding: clamp(14px, 2.4vw, 22px) clamp(20px, 4vw, 40px);
+  /* safe-area-inset-top: respeta status bar / notch en cualquier dispositivo */
+  padding-top: calc(clamp(14px, 2.4vw, 22px) + env(safe-area-inset-top, 0px));
+  background:var(--bg);
+  color:var(--ink);
   font-family:var(--font-sans);
-  font-size:11px;
+  font-size: clamp(10px, 1vw, 11px);
   letter-spacing:.22em;
   text-transform:uppercase;
   font-weight:500;
-  background:var(--bg);
-  transition:padding .35s ease;
-  color:var(--ink);
-  border:0;
-}
-.site-header.scrolled{
-  background:var(--bg);
-  padding:14px 40px;
 }
 
 .header-mark{
-  display:inline-flex; align-items:center;
-  justify-self:start;
-  grid-column:1;
-  transition:transform .3s ease;
+  grid-column: 1;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
 }
 .header-mark img{
-  width:46px; height:46px; object-fit:contain;
-  transition:transform .3s ease;
+  width: clamp(36px, 5vw, 46px);
+  height: clamp(36px, 5vw, 46px);
+  object-fit: contain;
+  transition: transform .3s ease;
 }
-.header-mark:hover img{ transform:rotate(-3deg) scale(1.05); }
+.header-mark:hover img{ transform: rotate(-3deg) scale(1.05); }
 
+/* nav-center centrado limpio con grid (sin position:absolute + translate) */
 .nav-center{
-  justify-self:center;
-  display:flex; gap:34px;
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%, -50%);
+  grid-column: 2;
+  justify-self: center;
+  display: flex;
+  gap: clamp(18px, 2.5vw, 34px);
 }
-.nav-link{ position:relative; color:var(--ink); opacity:.85; }
+.nav-link{ position: relative; color: var(--ink); opacity: .85; }
 .nav-link::after{
-  content:""; position:absolute; left:0; right:0; bottom:-6px; height:1px;
-  background:currentColor; transform:scaleX(0); transform-origin:left;
-  transition:transform .3s ease;
+  content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1px;
+  background: currentColor; transform: scaleX(0); transform-origin: left;
+  transition: transform .3s ease;
 }
-.nav-link:hover::after{ transform:scaleX(1); }
+.nav-link:hover::after{ transform: scaleX(1); }
 
-.nav-right{ justify-self:end; grid-column:3; }
+.nav-right{
+  grid-column: 3;
+  justify-self: end;
+}
 .nav-right .lang{
-  list-style:none; padding:0; margin:0;
-  display:flex; gap:4px;
+  list-style: none; padding: 0; margin: 0;
+  display: flex; gap: 4px;
 }
 .lang-btn{
-  background:transparent; border:0;
-  color:var(--ink);
-  padding:6px 10px;
-  font-family:inherit;
-  font-size:11px;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  font-weight:500;
-  opacity:.4;
-  transition:opacity .25s ease, color .25s ease;
+  background: transparent; border: 0;
+  color: var(--ink);
+  padding: 6px 10px;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: .4;
+  transition: opacity .25s ease, color .25s ease;
 }
-.lang-btn.active{ opacity:1; color:var(--accent-2); }
-.lang-btn:hover{ opacity:.95; }
+.lang-btn.active{ opacity: 1; color: var(--accent-2); }
+.lang-btn:hover{ opacity: .95; }
 
 
 /* ────────────────────────────────────────────────────────
@@ -991,88 +994,58 @@ button{ font-family:inherit; cursor:pointer; }
    RESPONSIVE
    ──────────────────────────────────────────────────────── */
 @media (max-width: 768px){
-  /* Mobile: bg al 50% (más claro que el 60% del desktop) */
+  /* Cream un punto más suave en móvil */
   :root{ --bg: #F4EFE6; }
 
-  /* html bg en espresso: visible solo en el área debajo del body (overscroll iOS).
-     El body sigue con su crema normal. Nada de background-attachment:fixed —
-     Android Chrome bloquea el scroll cuando eso está activo. */
-  html{ background:#191514; }
+  /* html en espresso: capa de seguridad para cualquier overscroll de iOS */
+  html{ background: #191514; }
 
-  /* Mobile nav — copia exacta de Aleia: display:block + text-align center, sin flex */
+  /* Garantizar scroll vertical en Android sin sobreescribir lo necesario */
+  html, body{ touch-action: pan-y; }
+
+  /* El nav-center se DESCONECTA del grid del header y se ancla al bottom del viewport */
   .nav-center{
-    position:fixed;
-    top:auto;
-    bottom:0;
-    left:0;
-    width:100%;
-    /* Altura = 70px de menú visible + safe-area-inset-bottom para extender
-       el fondo hasta el borde inferior pero manteniendo el texto fuera del
-       área de los botones del sistema en Android / home indicator en iOS */
+    position: fixed;
+    inset: auto 0 0 0;                              /* bottom:0, left:0, right:0 */
+    grid-column: unset;                             /* anular grid-column:2 de desktop */
+    justify-self: unset;                            /* anular justify-self:center */
+    /* Altura = 70px visibles + safe-area abajo (sistema Android / home indicator iOS) */
     height: calc(70px + env(safe-area-inset-bottom, 0px));
     padding-bottom: env(safe-area-inset-bottom, 0px);
-    background:#191514;
-    z-index:9900;
-    /* Aleia-style: block + text-align en vez de flex */
-    display:block;
-    text-align:center;
-    /* anular herencia desktop */
-    transform:none;
-    justify-self:auto;
-    padding-left:0;
-    padding-right:0;
-    gap:0;
-    border-top:1px solid rgba(255,255,255,.06);
-    overflow:visible;
-    box-sizing:border-box;
-  }
-  /* Extensión espresso debajo del nav: tapa el gap que aparece en iOS Safari
-     cuando la barra de URL se contrae/expande durante el scroll. Sin esto se ve
-     el crema del body asomando como una "segunda franja" abajo. */
-  .nav-center::after{
-    content:"";
-    position:absolute;
-    top:100%;
-    left:0;
-    right:0;
-    height:200px;
-    background:#191514;
-    pointer-events:none;
+    box-sizing: border-box;
+    background: #191514;
+    border-top: 1px solid rgba(255,255,255,.06);
+    z-index: 9900;
+    /* Centrar los 3 links con flex — más simple que line-height tricks */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20px, 8vw, 50px);
   }
   .nav-center .nav-link{
-    display:inline-block;
-    line-height:70px;      /* centrado vertical a la altura del nav */
-    margin:0 17px;         /* equivale al gap:34 anterior */
-    color:#F4EFE6;
-    opacity:1;
-    font-size:12px;
-    letter-spacing:.22em;
-    text-transform:uppercase;
-    font-weight:500;
-    font-family:var(--font-sans);
-    transition:none !important;
+    color: #F4EFE6;
+    opacity: 1;
+    font-size: clamp(11px, 3vw, 13px);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: var(--font-sans);
+    padding: 8px 12px;                              /* mejor touch target */
+    line-height: 1;
   }
-  /* Forzar scroll en Android — touch-action pan-y permite explícitamente el pan
-     vertical. Sin overscroll-behavior:none ni -webkit-overflow-scrolling que
-     pueden bloquear scroll en algunos navegadores Android. */
-  html, body{ touch-action: pan-y; }
-  /* padding-bottom = 70px del nav + safe-area-inset-bottom (botones Android /
-     home indicator iOS) + 20px de respiro */
-  body{ padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px)); }
-  .site-footer{ margin-bottom:0; padding-bottom: calc(140px + env(safe-area-inset-bottom, 0px)); }
+  /* Sin línea de underline animada en mobile (que pertenece al desktop) */
+  .nav-center .nav-link::after{ display: none; }
 
-  /* Header: añadir safe-area-inset-top como padding extra para que el contenido
-     (logo + ES/CA) quede SIEMPRE debajo del status bar y notch del dispositivo */
-  .site-header{
-    padding-top: calc(22px + env(safe-area-inset-top, 0px));
-  }
-  .site-header.scrolled{
-    padding-top: calc(14px + env(safe-area-inset-top, 0px));
+  /* Body padding-bottom para que el contenido no quede tapado por el nav */
+  body{ padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px)); }
+  .site-footer{
+    margin-bottom: 0;
+    padding-bottom: calc(140px + env(safe-area-inset-bottom, 0px));
   }
 }
 
 @media (max-width: 980px){
-  .site-header{ padding:18px 22px; font-size:10.5px; }
+  /* Header ya escala fluido con clamp() — no necesita override aquí */
   .nav-left{ gap:20px; }
 
   .hero{ padding:120px 22px 60px; min-height:90vh; }
