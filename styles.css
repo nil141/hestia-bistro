@@ -1006,7 +1006,11 @@ button{ font-family:inherit; cursor:pointer; }
     bottom:0;
     left:0;
     width:100%;
-    height:70px;
+    /* Altura = 70px de menú visible + safe-area-inset-bottom para extender
+       el fondo hasta el borde inferior pero manteniendo el texto fuera del
+       área de los botones del sistema en Android / home indicator en iOS */
+    height: calc(70px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
     background:#191514;
     z-index:9900;
     /* Aleia-style: block + text-align en vez de flex */
@@ -1015,10 +1019,12 @@ button{ font-family:inherit; cursor:pointer; }
     /* anular herencia desktop */
     transform:none;
     justify-self:auto;
-    padding:0;
+    padding-left:0;
+    padding-right:0;
     gap:0;
     border-top:1px solid rgba(255,255,255,.06);
     overflow:visible;
+    box-sizing:border-box;
   }
   /* Extensión espresso debajo del nav: tapa el gap que aparece en iOS Safari
      cuando la barra de URL se contrae/expande durante el scroll. Sin esto se ve
@@ -1050,8 +1056,19 @@ button{ font-family:inherit; cursor:pointer; }
      vertical. Sin overscroll-behavior:none ni -webkit-overflow-scrolling que
      pueden bloquear scroll en algunos navegadores Android. */
   html, body{ touch-action: pan-y; }
-  body{ padding-bottom:90px; }
-  .site-footer{ margin-bottom:0; padding-bottom:140px; }
+  /* padding-bottom = 70px del nav + safe-area-inset-bottom (botones Android /
+     home indicator iOS) + 20px de respiro */
+  body{ padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px)); }
+  .site-footer{ margin-bottom:0; padding-bottom: calc(140px + env(safe-area-inset-bottom, 0px)); }
+
+  /* Header: añadir safe-area-inset-top como padding extra para que el contenido
+     (logo + ES/CA) quede SIEMPRE debajo del status bar y notch del dispositivo */
+  .site-header{
+    padding-top: calc(22px + env(safe-area-inset-top, 0px));
+  }
+  .site-header.scrolled{
+    padding-top: calc(14px + env(safe-area-inset-top, 0px));
+  }
 }
 
 @media (max-width: 980px){
