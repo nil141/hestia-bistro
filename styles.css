@@ -1013,6 +1013,20 @@ button{ font-family:inherit; cursor:pointer; }
     padding:0;
     gap:0;
     border-top:1px solid rgba(255,255,255,.06);
+    overflow:visible;
+  }
+  /* Extensión espresso debajo del nav: tapa el gap que aparece en iOS Safari
+     cuando la barra de URL se contrae/expande durante el scroll. Sin esto se ve
+     el crema del body asomando como una "segunda franja" abajo. */
+  .nav-center::after{
+    content:"";
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    height:200px;
+    background:#191514;
+    pointer-events:none;
   }
   .nav-center .nav-link{
     display:inline-block;
