@@ -1003,6 +1003,8 @@ button{ font-family:inherit; cursor:pointer; }
     right:0;
     width:100%;
     height:70px;
+    transform:none;       /* anular translate(-50%,-50%) heredado de desktop */
+    justify-self:auto;
     display:flex;
     justify-content:center;
     align-items:center;
