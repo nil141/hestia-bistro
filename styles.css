@@ -995,9 +995,23 @@ button{ font-family:inherit; cursor:pointer; }
   :root{ --bg: #F4EFE6; }
 
   /* html bg en espresso para que iOS Safari nunca muestre crema entre el nav y el
-     borde inferior durante la transición de la barra de URL. El body sigue siendo
-     crema, así que el contenido normal de la página se ve igual. */
+     borde inferior durante la transición de la barra de URL. */
   html{ background:#191514; }
+
+  /* Body bg como gradiente fijo al viewport: crema arriba, espresso en los últimos
+     70px. Con background-attachment:fixed el gradiente NO se mueve con el scroll,
+     siempre los últimos 70px del viewport son espresso — coincidiendo con el nav. */
+  body{
+    background:
+      linear-gradient(
+        to bottom,
+        var(--bg) 0,
+        var(--bg) calc(100% - 70px),
+        #191514 calc(100% - 70px),
+        #191514 100%
+      );
+    background-attachment: fixed;
+  }
 
   /* Mobile nav — copia exacta de Aleia: display:block + text-align center, sin flex */
   .nav-center{
