@@ -994,27 +994,30 @@ button{ font-family:inherit; cursor:pointer; }
   /* Mobile: bg al 50% (más claro que el 60% del desktop) */
   :root{ --bg: #F4EFE6; }
 
-  /* Mobile nav: RESERVAR / CARTA / FAQ — fixed bottom (estilo Aleia: altura fija 70px) */
+  /* Mobile nav — copia exacta de Aleia: display:block + text-align center, sin flex */
   .nav-center{
     position:fixed;
     top:auto;
     bottom:0;
     left:0;
-    right:0;
     width:100%;
     height:70px;
-    transform:none;       /* anular translate(-50%,-50%) heredado de desktop */
-    justify-self:auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:34px;
-    padding:0 20px;
     background:#191514;
-    border-top:1px solid rgba(255,255,255,.06);
     z-index:9900;
+    /* Aleia-style: block + text-align en vez de flex */
+    display:block;
+    text-align:center;
+    /* anular herencia desktop */
+    transform:none;
+    justify-self:auto;
+    padding:0;
+    gap:0;
+    border-top:1px solid rgba(255,255,255,.06);
   }
   .nav-center .nav-link{
+    display:inline-block;
+    line-height:70px;      /* centrado vertical a la altura del nav */
+    margin:0 17px;         /* equivale al gap:34 anterior */
     color:#F4EFE6;
     opacity:1;
     font-size:12px;
