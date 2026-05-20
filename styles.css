@@ -212,9 +212,9 @@ button{ font-family:inherit; cursor:pointer; }
   transition:padding .35s ease;
   color:var(--ink);
   border:0;
-  /* NO usar transform aquí: el .nav-center es hijo en el DOM y si el padre
-     tiene transform, los position:fixed hijos se anclan al padre en vez del
-     viewport. Solo will-change para la capa del compositor. */
+  /* Forzar capa propia del compositor para que la chrome del navegador
+     (URL bar de Chrome Android) no tape al header durante el scroll. */
+  transform: translateZ(0);
   will-change: transform;
 }
 .site-header.scrolled{
