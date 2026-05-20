@@ -458,7 +458,7 @@ button{ font-family:inherit; cursor:pointer; }
   background:#1a0e08;
 }
 .full-image[data-img="interior"] .full-image-fill{
-  background: url('assets/the-restaurant.webp') center/cover no-repeat;
+  background: url('assets/the-restaurant.webp?v=2') center/cover no-repeat;
   filter:none;
 }
 .full-image-fill{
