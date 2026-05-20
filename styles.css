@@ -991,6 +991,9 @@ button{ font-family:inherit; cursor:pointer; }
    RESPONSIVE
    ──────────────────────────────────────────────────────── */
 @media (max-width: 768px){
+  /* Mobile: bg al 50% (más claro que el 60% del desktop) */
+  :root{ --bg: #F4EFE6; }
+
   /* Mobile nav: RESERVAR / CARTA / FAQ — fixed bottom, JS nudges transform when needed */
   .nav-center{
     position:fixed;
@@ -1010,12 +1013,12 @@ button{ font-family:inherit; cursor:pointer; }
     padding-bottom:max(22px, calc(18px + env(safe-area-inset-bottom)));
     padding-left:20px;
     padding-right:20px;
-    background:#FFFFFF;
-    border-top:1px solid rgba(0,0,0,.06);
+    background:#231612;
+    border-top:1px solid rgba(255,255,255,.06);
     z-index:60;
     overflow:visible;
   }
-  /* Solid white extension below the nav: covers any iOS scroll-lag gap */
+  /* Espresso extension below the nav: covers any iOS scroll-lag gap */
   .nav-center::after{
     content:"";
     position:absolute;
@@ -1023,11 +1026,11 @@ button{ font-family:inherit; cursor:pointer; }
     left:0;
     right:0;
     height:200px;
-    background:#FFFFFF;
+    background:#231612;
     pointer-events:none;
   }
   .nav-center .nav-link{
-    color:#14100B;
+    color:#F4EFE6;
     opacity:1;
     font-size:12px;
     letter-spacing:.22em;
