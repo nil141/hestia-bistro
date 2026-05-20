@@ -994,6 +994,11 @@ button{ font-family:inherit; cursor:pointer; }
   /* Mobile: bg al 50% (más claro que el 60% del desktop) */
   :root{ --bg: #F4EFE6; }
 
+  /* html bg en espresso para que iOS Safari nunca muestre crema entre el nav y el
+     borde inferior durante la transición de la barra de URL. El body sigue siendo
+     crema, así que el contenido normal de la página se ve igual. */
+  html{ background:#191514; }
+
   /* Mobile nav — copia exacta de Aleia: display:block + text-align center, sin flex */
   .nav-center{
     position:fixed;
