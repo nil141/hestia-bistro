@@ -918,10 +918,8 @@ button{ font-family:inherit; cursor:pointer; }
 .full-image--square{ aspect-ratio:1/1; }
 
 .full-image[data-img="anoia"] .full-image-fill{
-  background:
-    linear-gradient(180deg, rgba(20,12,8,0) 0%, rgba(20,12,8,.20) 80%),
-    radial-gradient(60% 50% at 50% 35%, rgba(214,180,140,.30) 0%, transparent 65%),
-    linear-gradient(180deg, #2d2118 0%, #1a100a 60%, #0e0805 100%);
+  background: url('assets/anoia.jpg?v=1') center/cover no-repeat;
+  filter: none;
 }
 
 
@@ -950,7 +948,7 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .chef-photo-fill{
   position:absolute; inset:0;
-  background:url('assets/chef.jpg') center/cover no-repeat #1a0e08;
+  background:url('assets/chef.jpg?v=3') center/cover no-repeat #1a0e08;
 }
 
 .chef-text{ padding-top:12px; }
@@ -1189,4 +1187,144 @@ button{ font-family:inherit; cursor:pointer; }
   .hero-card-text{ font-size:15.5px; }
 
   .footer-grid{ grid-template-columns: 1fr; }
+}
+
+
+/* ────────────────────────────────────────────────────────
+   PÁGINA RESERVAR — placeholder para el widget de CoverManager
+   ──────────────────────────────────────────────────────── */
+.reservar-main{
+  /* Margen superior = altura del header (fluido + safe-area) + algo de aire */
+  padding-top: calc(clamp(14px, 2.4vw, 22px) * 2 + 50px + env(safe-area-inset-top, 0px));
+  padding-left: clamp(20px, 4vw, 40px);
+  padding-right: clamp(20px, 4vw, 40px);
+  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+  max-width: 1240px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+
+/* ────────────────────────────────────────────────────────
+   PÁGINA FAQ — estilo editorial Aleia: pregunta XL + respuesta a la derecha
+   ──────────────────────────────────────────────────────── */
+.faq-main{
+  padding-top: calc(clamp(14px, 2.4vw, 22px) * 2 + 240px + env(safe-area-inset-top, 0px));
+  padding-left: clamp(20px, 4vw, 40px);
+  padding-right: clamp(20px, 4vw, 40px);
+  padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px));
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.faq-list{
+  display: flex;
+  flex-direction: column;
+  gap: clamp(50px, 7vw, 100px);
+}
+/* Cada Q&A ocupa 7/12 del ancho · alterna lado: impar a la derecha, par a la izquierda
+   (mismas proporciones que Aleia: col-lg-7 + offset-lg-5 en su Bootstrap grid) */
+.faq-item{
+  display: flex;
+  flex-direction: column;
+  gap: clamp(30px, 4vw, 50px);
+  width: 58.3333%;                       /* 7/12 columnas */
+  box-sizing: border-box;
+}
+.faq-item:nth-child(odd){
+  margin-left: 41.6667%;                 /* 5/12 columnas de offset desde la izquierda → derecha */
+  margin-right: 0;
+}
+.faq-item:nth-child(even){
+  margin-left: 0;                        /* sin offset → izquierda */
+  margin-right: 41.6667%;
+}
+.faq-question{
+  margin: 0;
+  font-family: "Dahlia Display", var(--font-display);
+  font-weight: 500;                         /* match Aleia */
+  font-style: normal;                       /* match Aleia */
+  letter-spacing: -.005em;
+  line-height: 1;                           /* match Aleia (64/64 = 1.0) */
+  font-size: clamp(36px, 6vw, 64px);        /* desktop cap 64px (Aleia) — escala en mobile */
+  text-transform: uppercase;
+  color: #212529;                           /* exact Aleia color rgb(33,37,41) */
+}
+.faq-question span{
+  display: block;
+}
+.faq-answer{
+  margin: 0;
+  font-family: var(--font-sans);            /* Barlow (match Aleia) */
+  font-size: 16px;                          /* exact Aleia */
+  line-height: 1.8;                         /* match Aleia (29/16 ≈ 1.8) */
+  color: #212529;                           /* exact Aleia color rgb(33,37,41) */
+  font-weight: 300;                         /* match Aleia */
+}
+/* Para respuestas con varios párrafos: envolverlas en .faq-answer-block
+   y heredan gap pequeño en vez del gap grande del .faq-item */
+.faq-answer-block{
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+}
+.faq-answer a{
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  transition: color .25s ease, border-color .25s ease;
+}
+.faq-answer a:hover{
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
+@media (max-width: 768px){
+  .faq-item,
+  .faq-item:nth-child(odd),
+  .faq-item:nth-child(even){
+    width: 100%;                       /* ancho completo en móvil */
+    margin-left: 0;
+    margin-right: 0;
+    gap: 20px;
+  }
+  .faq-list{
+    gap: clamp(70px, 14vw, 100px);
+  }
+}
+
+
+/* ────────────────────────────────────────────────────────
+   PÁGINAS LEGALES — Términos, Privacidad, Cookies (lista numerada)
+   ──────────────────────────────────────────────────────── */
+.legal-main{
+  padding-top: calc(clamp(14px, 2.4vw, 22px) * 2 + 180px + env(safe-area-inset-top, 0px));
+  padding-left: clamp(20px, 4vw, 40px);
+  padding-right: clamp(20px, 4vw, 40px);
+  padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px));
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.legal-list{
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 2vw, 28px);
+}
+.legal-item{
+  margin: 0;
+  font-family: var(--font-sans);            /* Barlow */
+  font-size: 16px;                          /* mismo que faq-answer */
+  line-height: 1.8;                         /* mismo que faq-answer */
+  color: #212529;
+  font-weight: 300;
+}
+.legal-item strong{
+  font-weight: 500;
+}
+.legal-item a{
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  transition: color .25s ease, border-color .25s ease;
+}
+.legal-item a:hover{
+  color: var(--accent-2);
+  border-color: var(--accent-2);
 }
