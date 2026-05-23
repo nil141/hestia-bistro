@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>FAQ · Hestia Bistró</title>
-<meta name="description" content="Preguntas frecuentes sobre reservas, horarios y dudas en Hestia Bistró, Vilanova del Camí." />
+<title data-i18n="meta.title.faq">FAQ · Hestia Bistró</title>
+<meta name="description" data-i18n-content="meta.desc.faq" content="Preguntas frecuentes sobre reservas, horarios y dudas en Hestia Bistró, Vilanova del Camí." />
 <link rel="icon" type="image/png" href="assets/logo-full.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,13 +21,13 @@
   <a href="index.html" class="header-mark" aria-label="Hestia Bistró">
     <img src="assets/logo-h-mark.png" alt="" />
   </a>
-  <nav class="nav-center" aria-label="Primaria">
-    <a href="reservar.html"    class="nav-link">Reservar</a>
-    <a href="carta.html" class="nav-link">Carta</a>
-    <a href="faq.html"         class="nav-link">FAQ</a>
+  <nav class="nav-center" aria-label="Primaria" data-i18n-aria-label="nav.aria">
+    <a href="reservar.html"    class="nav-link" data-i18n="nav.reservar">Reservar</a>
+    <a href="carta.html" class="nav-link" data-i18n="nav.carta">Carta</a>
+    <a href="faq.html"         class="nav-link" data-i18n="nav.faq">FAQ</a>
   </nav>
   <div class="nav-right">
-    <ul class="lang" aria-label="Idioma">
+    <ul class="lang" aria-label="Idioma" data-i18n-aria-label="lang.aria">
       <li><button class="lang-btn active" data-lang="es">ES</button></li>
       <li><button class="lang-btn"        data-lang="ca">CA</button></li>
     </ul>
@@ -40,11 +40,11 @@
 
     <article class="faq-item">
       <h2 class="faq-question">
-        <span>¿Cómo puedo</span>
-        <span>realizar una reserva</span>
-        <span>en Hestia Bistró?</span>
+        <span data-i18n="faq.q1.1">¿Cómo puedo</span>
+        <span data-i18n="faq.q1.2">realizar una reserva</span>
+        <span data-i18n="faq.q1.3">en Hestia Bistró?</span>
       </h2>
-      <p class="faq-answer">
+      <p class="faq-answer" data-i18n-html="faq.a1">
         Para realizar una reserva puede hacerlo a través de nuestro
         <a href="reservar.html">apartado de reservas</a> siguiendo los pasos
         indicados. En caso de no haber disponibilidad en la fecha deseada,
@@ -55,11 +55,11 @@
 
     <article class="faq-item">
       <h2 class="faq-question">
-        <span>¿Con cuánto tiempo</span>
-        <span>de anticipación debo</span>
-        <span>realizar una reserva?</span>
+        <span data-i18n="faq.q2.1">¿Con cuánto tiempo</span>
+        <span data-i18n="faq.q2.2">de anticipación debo</span>
+        <span data-i18n="faq.q2.3">realizar una reserva?</span>
       </h2>
-      <p class="faq-answer">
+      <p class="faq-answer" data-i18n-html="faq.a2">
         Puede realizar su reserva con un máximo de 90 días de anticipación, a
         través de nuestra <a href="reservar.html">página de reservas</a> o por
         correo electrónico a
@@ -69,11 +69,11 @@
 
     <article class="faq-item">
       <h2 class="faq-question">
-        <span>¿Cómo puedo</span>
-        <span>realizar una reserva</span>
-        <span>para un grupo?</span>
+        <span data-i18n="faq.q3.1">¿Cómo puedo</span>
+        <span data-i18n="faq.q3.2">realizar una reserva</span>
+        <span data-i18n="faq.q3.3">para un grupo?</span>
       </h2>
-      <p class="faq-answer">
+      <p class="faq-answer" data-i18n-html="faq.a3">
         Si desea realizar una reserva para grupo, deberá ponerse en contacto
         con nosotros a través del siguiente correo electrónico:
         <a href="mailto:hestiabistrorestaurant@gmail.com">hestiabistrorestaurant@gmail.com</a>.
@@ -84,11 +84,11 @@
 
     <article class="faq-item">
       <h2 class="faq-question">
-        <span>Tengo dudas</span>
-        <span>respecto a una</span>
-        <span>reserva ya realizada.</span>
+        <span data-i18n="faq.q4.1">Tengo dudas</span>
+        <span data-i18n="faq.q4.2">respecto a una</span>
+        <span data-i18n="faq.q4.3">reserva ya realizada.</span>
       </h2>
-      <p class="faq-answer">
+      <p class="faq-answer" data-i18n-html="faq.a4">
         Para cualquier duda relacionada con su reserva, no dude en contactar
         con nosotros por correo a
         <a href="mailto:hestiabistrorestaurant@gmail.com">hestiabistrorestaurant@gmail.com</a>
@@ -98,16 +98,16 @@
 
     <article class="faq-item">
       <h2 class="faq-question">
-        <span>¿Cuál es la carta que</span>
-        <span>ofrecen?</span>
+        <span data-i18n="faq.q5.1">¿Cuál es la carta que</span>
+        <span data-i18n="faq.q5.2">ofrecen?</span>
       </h2>
       <div class="faq-answer-block">
-        <p class="faq-answer">
+        <p class="faq-answer" data-i18n-html="faq.a5.p1">
           Hestia Bistró ofrece una <strong>carta de temporada</strong> que
           presenta la cocina y la filosofía del bistró. Varía según la
           temporalidad y disponibilidad del producto.
         </p>
-        <p class="faq-answer">
+        <p class="faq-answer" data-i18n-html="faq.a5.p2">
           Para poder personalizar su experiencia al máximo, le pedimos que al
           momento de realizar la reserva nos facilite información sobre
           alergias, intolerancias o incluso alimentos que no sean de su gusto.
@@ -117,10 +117,10 @@
 
     <article class="faq-item">
       <h2 class="faq-question">
-        <span>¿Cuál es el horario</span>
-        <span>de Hestia Bistró?</span>
+        <span data-i18n="faq.q6.1">¿Cuál es el horario</span>
+        <span data-i18n="faq.q6.2">de Hestia Bistró?</span>
       </h2>
-      <p class="faq-answer">
+      <p class="faq-answer" data-i18n-html="faq.a6">
         Abrimos de <strong>jueves a domingo</strong>. Jueves solo cena
         (20:00–23:00). Viernes y sábado comida (13:00–16:00) y cena
         (20:00–23:00). Domingo solo comida (13:00–16:00). Cerrado lunes,
@@ -130,10 +130,10 @@
 
     <article class="faq-item">
       <h2 class="faq-question">
-        <span>¿Dónde se encuentra</span>
-        <span>Hestia Bistró?</span>
+        <span data-i18n="faq.q7.1">¿Dónde se encuentra</span>
+        <span data-i18n="faq.q7.2">Hestia Bistró?</span>
       </h2>
-      <p class="faq-answer">
+      <p class="faq-answer" data-i18n-html="faq.a7">
         Estamos en <strong>Carrer del Pare Claret, 19</strong>, 08788 Vilanova
         del Camí — en pleno corazón de la comarca de l'Anoia, a solo
         <strong>40 minutos de Barcelona</strong>.
@@ -152,12 +152,12 @@
         <img src="assets/logo-h-mark.png" alt="" class="footer-logo" />
         <p class="footer-tagline">
           Hestia Bistró<br/>
-          <a href="index.html">Cocina de autor en l'Anoia</a>
+          <a href="index.html" data-i18n="foot.brand.tagline">Cocina de autor en l'Anoia</a>
         </p>
       </div>
 
       <div class="footer-col">
-        <p class="footer-eyebrow">Dónde</p>
+        <p class="footer-eyebrow" data-i18n="foot.donde">Dónde</p>
         <address class="footer-address">
           <p>Carrer del Pare Claret, 19</p>
           <p>08788, Vilanova del Camí</p>
@@ -167,29 +167,29 @@
       </div>
 
       <div class="footer-col">
-        <p class="footer-eyebrow">Cuándo</p>
+        <p class="footer-eyebrow" data-i18n="foot.cuando">Cuándo</p>
         <div class="footer-hours">
-          <p><strong>Jueves</strong></p>
-          <p>Cena: 20:00 a 23:00</p>
-          <p><strong>Viernes a Sábado</strong></p>
-          <p>Comida: 13:00 a 16:00</p>
-          <p>Cena: 20:00 a 23:00</p>
-          <p><strong>Domingo</strong></p>
-          <p>Comida: 13:00 a 16:00</p>
+          <p><strong data-i18n="foot.h.jue">Jueves</strong></p>
+          <p data-i18n="foot.h.cena">Cena: 20:00 a 23:00</p>
+          <p><strong data-i18n="foot.h.visa">Viernes a Sábado</strong></p>
+          <p data-i18n="foot.h.comida">Comida: 13:00 a 16:00</p>
+          <p data-i18n="foot.h.cena">Cena: 20:00 a 23:00</p>
+          <p><strong data-i18n="foot.h.dom">Domingo</strong></p>
+          <p data-i18n="foot.h.comida">Comida: 13:00 a 16:00</p>
         </div>
       </div>
 
       <div class="footer-col">
-        <p class="footer-eyebrow">Links</p>
+        <p class="footer-eyebrow" data-i18n="foot.links">Links</p>
         <ul class="footer-links">
-          <li><a href="reservar.html">Reservar</a></li>
-          <li><a href="carta.html">Carta</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="reservar.html" data-i18n="nav.reservar">Reservar</a></li>
+          <li><a href="carta.html" data-i18n="nav.carta">Carta</a></li>
+          <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
           <li class="spacer" aria-hidden="true"></li>
-          <li><a href="privacidad.html">Política de Privacidad</a></li>
-          <li><a href="terminos.html">Términos y condiciones</a></li>
+          <li><a href="privacidad.html" data-i18n="foot.l.privacidad">Política de Privacidad</a></li>
+          <li><a href="terminos.html" data-i18n="foot.l.terminos">Términos y condiciones</a></li>
           <li class="spacer" aria-hidden="true"></li>
-          <li class="footer-credit">Diseñado: <a href="https://141agency.com" target="_blank" rel="noopener">141'Digital</a></li>
+          <li class="footer-credit"><span data-i18n="foot.l.disenado">Diseñado:</span> <a href="https://141agency.com" target="_blank" rel="noopener">141'Digital</a></li>
         </ul>
       </div>
 
@@ -197,6 +197,7 @@
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

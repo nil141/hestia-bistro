@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>Hestia Bistró · Cocina de autor en l'Anoia</title>
-<meta name="description" content="Hestia Bistró — bistró de cocina de autor en Vilanova del Camí. La excelencia de la alta cocina en formato de proximidad. Sin etiquetas. Sin frialdad." />
+<title data-i18n="meta.title.index">Hestia Bistró · Cocina de autor en l'Anoia</title>
+<meta name="description" data-i18n-content="meta.desc.index" content="Hestia Bistró — bistró de cocina de autor en Vilanova del Camí. La excelencia de la alta cocina en formato de proximidad. Sin etiquetas. Sin frialdad." />
 <link rel="icon" type="image/png" href="assets/logo-full.png" />
 <!-- Preload del hero: descarga la imagen con prioridad alta antes que el CSS,
      así aparece casi al momento de cargar la página en vez de tardar. -->
@@ -24,13 +24,13 @@
   <a href="#" class="header-mark" aria-label="Hestia Bistró">
     <img src="assets/logo-h-mark.png" alt="" />
   </a>
-  <nav class="nav-center" aria-label="Primaria">
-    <a href="reservar.html" class="nav-link">Reservar</a>
-    <a href="carta.html"    class="nav-link">Carta</a>
-    <a href="faq.html" class="nav-link">FAQ</a>
+  <nav class="nav-center" aria-label="Primaria" data-i18n-aria-label="nav.aria">
+    <a href="reservar.html" class="nav-link" data-i18n="nav.reservar">Reservar</a>
+    <a href="carta.html"    class="nav-link" data-i18n="nav.carta">Carta</a>
+    <a href="faq.html" class="nav-link" data-i18n="nav.faq">FAQ</a>
   </nav>
   <div class="nav-right">
-    <ul class="lang" aria-label="Idioma">
+    <ul class="lang" aria-label="Idioma" data-i18n-aria-label="lang.aria">
       <li><button class="lang-btn active" data-lang="es">ES</button></li>
       <li><button class="lang-btn"        data-lang="ca">CA</button></li>
     </ul>
@@ -41,7 +41,7 @@
 <!-- ─── HERO ───────────────────────────────────────────── -->
 <section class="hero">
   <div class="hero-wordmark">
-    <h1 class="visually-hidden">Hestia Bistró</h1>
+    <h1 class="visually-hidden" data-i18n="hero.h1">Hestia Bistró</h1>
     <img src="assets/hestia-wordmark-new.svg?v=6" alt="Hestia Bistró" class="hero-wordmark-svg" />
   </div>
 
@@ -58,11 +58,11 @@
 <section class="block-split" id="restaurante">
   <div class="block-split-grid">
     <h2 class="display-title section-title">
-      <span>EL</span>
-      <span>RESTAURANTE</span>
+      <span data-i18n="rest.title.1">EL</span>
+      <span data-i18n="rest.title.2">RESTAURANTE</span>
     </h2>
     <div class="block-split-body">
-      <p>
+      <p data-i18n-html="rest.p1">
         Situado en <strong>Vilanova del Camí</strong>, Hestia toma el nombre de la
         <strong>diosa griega que representa el hogar</strong>. No es una
         decoración: es el posicionamiento de un proyecto que busca traer la
@@ -73,7 +73,7 @@
         de la comarca de <strong>l'Anoia</strong>, cada servicio es un homenaje al
         producto de temporada y al sabor honesto.
       </p>
-      <p>
+      <p data-i18n-html="rest.p2">
         Ofrecemos un espacio íntimo y acogedor diseñado para diferentes momentos:
         desde parejas que buscan una <strong>cena con propuesta</strong> lejos del
         ruido de Barcelona, hasta grupos de amigos que celebran alrededor de una
@@ -81,7 +81,7 @@
         nuestras mesas la <strong>cercanía</strong> necesaria para sus encuentros,
         sin renunciar a una <strong>cocina elaborada</strong> que se atreve desde lo familiar.
       </p>
-      <a href="#concepto" class="btn btn-amber">El restaurante</a>
+      <a href="#concepto" class="btn btn-amber" data-i18n="rest.btn">El restaurante</a>
     </div>
   </div>
 </section>
@@ -89,7 +89,7 @@
 <div class="full-image-wrap">
   <figure class="full-image" data-img="interior">
     <div class="full-image-fill"></div>
-    <figcaption class="img-cap">Sala · Hestia Bistró</figcaption>
+    <figcaption class="img-cap" data-i18n="rest.cap">Sala · Hestia Bistró</figcaption>
   </figure>
   <span class="accent-rule" aria-hidden="true"></span>
 </div>
@@ -99,13 +99,13 @@
 <section class="proposal-section" id="propuesta">
   <div class="proposal-wrap">
     <h2 class="display-title section-title">
-      <span>NUESTRA</span>
-      <span>PROPUESTA</span>
+      <span data-i18n="prop.title.1">NUESTRA</span>
+      <span data-i18n="prop.title.2">PROPUESTA</span>
     </h2>
 
     <div class="proposal-intro">
-      <p class="proposal-eyebrow">Carta</p>
-      <p class="proposal-text">
+      <p class="proposal-eyebrow" data-i18n="prop.eyebrow">Carta</p>
+      <p class="proposal-text" data-i18n-html="prop.text">
         Nuestra <strong>carta de temporada</strong> es un puente culinario entre
         la cocina del Mediterráneo y técnicas y sabores de todo el mundo
         integradas con cariño y sin renunciar a las bases tradicionales de la
@@ -119,26 +119,26 @@
     </div>
 
     <div class="proposal-menu">
-      <a href="carta.html" class="btn btn-amber">Ver la carta</a>
+      <a href="carta.html" class="btn btn-amber" data-i18n="prop.btn">Ver la carta</a>
 
       <hr class="proposal-divider" />
 
       <div class="menu-line">
-        <span class="menu-line-name">Carta de temporada</span>
+        <span class="menu-line-name" data-i18n="prop.temporada">Carta de temporada</span>
       </div>
 
-      <h3 class="proposal-subheading">Para acompañar</h3>
-      <p class="proposal-subtext">
+      <h3 class="proposal-subheading" data-i18n="prop.subhead">Para acompañar</h3>
+      <p class="proposal-subtext" data-i18n="prop.subtext">
         Nuestras cartas de vinos y bebidas están concebidas para resaltar
         cada plato, complementando perfectamente la experiencia.
       </p>
 
       <div class="menu-line">
-        <span class="menu-line-name">Carta de vinos</span>
+        <span class="menu-line-name" data-i18n="prop.vinos">Carta de vinos</span>
       </div>
 
       <div class="menu-line">
-        <span class="menu-line-name">Carta de bebidas</span>
+        <span class="menu-line-name" data-i18n="prop.bebidas">Carta de bebidas</span>
       </div>
     </div>
   </div>
@@ -153,14 +153,14 @@
     </div>
 
     <div class="chef-text">
-      <p class="chef-eyebrow">El Chef</p>
+      <p class="chef-eyebrow" data-i18n="chef.eyebrow">El Chef</p>
       <h2 class="display-title section-title chef-name">
-        <span>JOAN</span>
-        <span>FORTES</span>
+        <span data-i18n="chef.name.1">JOAN</span>
+        <span data-i18n="chef.name.2">FORTES</span>
       </h2>
 
       <div class="chef-body">
-        <p>
+        <p data-i18n-html="chef.p1">
           Nací en l'Anoia, en el seno de una familia que me enseñó el valor
           del producto de proximidad y de la cocina hecha con tiempo. A los 18
           años dejé mi zona de confort para emprender un viaje que me llevaría
@@ -168,7 +168,7 @@
           experiencia en <strong>mesas con estrella Michelin</strong> y consolidar
           una visión propia, sentí que era el momento de un nuevo desafío.
         </p>
-        <p>
+        <p data-i18n-html="chef.p2">
           <strong>Hestia</strong> es ese desafío. Es la culminación de una
           búsqueda constante de la excelencia, pero esta vez, con un ingrediente
           secreto que lo cambia todo: la cercanía. Trabajar con un equipo que
@@ -179,7 +179,7 @@
           no es solo un restaurante, es la emoción de cocinar para casa en un
           escenario íntimo.
         </p>
-        <a href="https://es.linkedin.com/in/joan-fortes-171a9881?trk=people-guest_people_search-card" target="_blank" rel="noopener" class="btn btn-amber">Ver experiencia</a>
+        <a href="https://es.linkedin.com/in/joan-fortes-171a9881?trk=people-guest_people_search-card" target="_blank" rel="noopener" class="btn btn-amber" data-i18n="chef.btn">Ver experiencia</a>
       </div>
     </div>
   </div>
@@ -190,12 +190,12 @@
 <section class="proposal-section territorio-section" id="territorio">
   <div class="proposal-wrap">
     <h2 class="display-title section-title">
-      <span>EL CORAZÓN</span>
-      <span>DE L'ANOIA</span>
+      <span data-i18n="terr.title.1">EL CORAZÓN</span>
+      <span data-i18n="terr.title.2">DE L'ANOIA</span>
     </h2>
 
     <div class="proposal-intro territorio-intro">
-      <p class="proposal-text">
+      <p class="proposal-text" data-i18n-html="terr.text">
         En el corazón de la comarca de <strong>l'Anoia</strong>,
         <strong>Vilanova del Camí</strong> y los municipios vecinos componen
         un territorio histórico marcado por su tradición textil, sus paisajes
@@ -208,7 +208,7 @@
         salir de casa, situando nuestra gastronomía en el marco más cercano y
         honesto de <strong>l'Anoia</strong>.
       </p>
-      <a href="reservar.html" class="btn btn-amber territorio-btn">Ven a conocernos</a>
+      <a href="reservar.html" class="btn btn-amber territorio-btn" data-i18n="terr.btn">Ven a conocernos</a>
     </div>
   </div>
 
@@ -250,12 +250,12 @@
         <img src="assets/logo-h-mark.png" alt="" class="footer-logo" />
         <p class="footer-tagline">
           Hestia Bistró<br/>
-          <a href="#">Cocina de autor en l'Anoia</a>
+          <a href="#" data-i18n="foot.brand.tagline">Cocina de autor en l'Anoia</a>
         </p>
       </div>
 
       <div class="footer-col">
-        <p class="footer-eyebrow">Dónde</p>
+        <p class="footer-eyebrow" data-i18n="foot.donde">Dónde</p>
         <address class="footer-address">
           <p>Carrer del Pare Claret, 19</p>
           <p>08788, Vilanova del Camí</p>
@@ -265,29 +265,29 @@
       </div>
 
       <div class="footer-col">
-        <p class="footer-eyebrow">Cuándo</p>
+        <p class="footer-eyebrow" data-i18n="foot.cuando">Cuándo</p>
         <div class="footer-hours">
-          <p><strong>Jueves</strong></p>
-          <p>Cena: 20:00 a 23:00</p>
-          <p><strong>Viernes a Sábado</strong></p>
-          <p>Comida: 13:00 a 16:00</p>
-          <p>Cena: 20:00 a 23:00</p>
-          <p><strong>Domingo</strong></p>
-          <p>Comida: 13:00 a 16:00</p>
+          <p><strong data-i18n="foot.h.jue">Jueves</strong></p>
+          <p data-i18n="foot.h.cena">Cena: 20:00 a 23:00</p>
+          <p><strong data-i18n="foot.h.visa">Viernes a Sábado</strong></p>
+          <p data-i18n="foot.h.comida">Comida: 13:00 a 16:00</p>
+          <p data-i18n="foot.h.cena">Cena: 20:00 a 23:00</p>
+          <p><strong data-i18n="foot.h.dom">Domingo</strong></p>
+          <p data-i18n="foot.h.comida">Comida: 13:00 a 16:00</p>
         </div>
       </div>
 
       <div class="footer-col">
-        <p class="footer-eyebrow">Links</p>
+        <p class="footer-eyebrow" data-i18n="foot.links">Links</p>
         <ul class="footer-links">
-          <li><a href="reservar.html">Reservar</a></li>
-          <li><a href="carta.html">Carta</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="reservar.html" data-i18n="nav.reservar">Reservar</a></li>
+          <li><a href="carta.html" data-i18n="nav.carta">Carta</a></li>
+          <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
           <li class="spacer" aria-hidden="true"></li>
-          <li><a href="privacidad.html">Política de Privacidad</a></li>
-          <li><a href="terminos.html">Términos y condiciones</a></li>
+          <li><a href="privacidad.html" data-i18n="foot.l.privacidad">Política de Privacidad</a></li>
+          <li><a href="terminos.html" data-i18n="foot.l.terminos">Términos y condiciones</a></li>
           <li class="spacer" aria-hidden="true"></li>
-          <li class="footer-credit">Diseñado: <a href="https://141agency.com" target="_blank" rel="noopener">141'Digital</a></li>
+          <li class="footer-credit"><span data-i18n="foot.l.disenado">Diseñado:</span> <a href="https://141agency.com" target="_blank" rel="noopener">141'Digital</a></li>
         </ul>
       </div>
 
@@ -296,6 +296,7 @@
 </footer>
 
 
+<script src="i18n.js"></script>
 <script src="script.js?v=20260518f"></script>
 </body>
 </html>

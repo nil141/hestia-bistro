@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>Reservar · Hestia Bistró</title>
-<meta name="description" content="Reserva tu mesa en Hestia Bistró — cocina de autor en Vilanova del Camí." />
+<title data-i18n="meta.title.reservar">Reservar · Hestia Bistró</title>
+<meta name="description" data-i18n-content="meta.desc.reservar" content="Reserva tu mesa en Hestia Bistró — cocina de autor en Vilanova del Camí." />
 <link rel="icon" type="image/png" href="assets/logo-full.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,13 +21,13 @@
   <a href="index.html" class="header-mark" aria-label="Hestia Bistró">
     <img src="assets/logo-h-mark.png" alt="" />
   </a>
-  <nav class="nav-center" aria-label="Primaria">
-    <a href="reservar.html"     class="nav-link">Reservar</a>
-    <a href="carta.html"  class="nav-link">Carta</a>
-    <a href="faq.html"          class="nav-link">FAQ</a>
+  <nav class="nav-center" aria-label="Primaria" data-i18n-aria-label="nav.aria">
+    <a href="reservar.html"     class="nav-link" data-i18n="nav.reservar">Reservar</a>
+    <a href="carta.html"  class="nav-link" data-i18n="nav.carta">Carta</a>
+    <a href="faq.html"          class="nav-link" data-i18n="nav.faq">FAQ</a>
   </nav>
   <div class="nav-right">
-    <ul class="lang" aria-label="Idioma">
+    <ul class="lang" aria-label="Idioma" data-i18n-aria-label="lang.aria">
       <li><button class="lang-btn active" data-lang="es">ES</button></li>
       <li><button class="lang-btn"        data-lang="ca">CA</button></li>
     </ul>
@@ -39,8 +39,8 @@
   <!-- TODO: cuando esté el widget de CoverManager, sustituir el bloque
        .reservar-placeholder por el iframe / script -->
   <div class="reservar-placeholder">
-    <h1 class="reservar-placeholder-title">Próximamente</h1>
-    <p class="reservar-placeholder-text">
+    <h1 class="reservar-placeholder-title" data-i18n="res.title">Próximamente</h1>
+    <p class="reservar-placeholder-text" data-i18n-html="res.text">
       Estamos preparando nuestro sistema de reservas online. Mientras tanto,
       puedes reservar contactándonos en
       <a href="mailto:hestiabistrorestaurant@gmail.com">hestiabistrorestaurant@gmail.com</a>
@@ -59,12 +59,12 @@
         <img src="assets/logo-h-mark.png" alt="" class="footer-logo" />
         <p class="footer-tagline">
           Hestia Bistró<br/>
-          <a href="index.html">Cocina de autor en l'Anoia</a>
+          <a href="index.html" data-i18n="foot.brand.tagline">Cocina de autor en l'Anoia</a>
         </p>
       </div>
 
       <div class="footer-col">
-        <p class="footer-eyebrow">Dónde</p>
+        <p class="footer-eyebrow" data-i18n="foot.donde">Dónde</p>
         <address class="footer-address">
           <p>Carrer del Pare Claret, 19</p>
           <p>08788, Vilanova del Camí</p>
@@ -74,29 +74,29 @@
       </div>
 
       <div class="footer-col">
-        <p class="footer-eyebrow">Cuándo</p>
+        <p class="footer-eyebrow" data-i18n="foot.cuando">Cuándo</p>
         <div class="footer-hours">
-          <p><strong>Jueves</strong></p>
-          <p>Cena: 20:00 a 23:00</p>
-          <p><strong>Viernes a Sábado</strong></p>
-          <p>Comida: 13:00 a 16:00</p>
-          <p>Cena: 20:00 a 23:00</p>
-          <p><strong>Domingo</strong></p>
-          <p>Comida: 13:00 a 16:00</p>
+          <p><strong data-i18n="foot.h.jue">Jueves</strong></p>
+          <p data-i18n="foot.h.cena">Cena: 20:00 a 23:00</p>
+          <p><strong data-i18n="foot.h.visa">Viernes a Sábado</strong></p>
+          <p data-i18n="foot.h.comida">Comida: 13:00 a 16:00</p>
+          <p data-i18n="foot.h.cena">Cena: 20:00 a 23:00</p>
+          <p><strong data-i18n="foot.h.dom">Domingo</strong></p>
+          <p data-i18n="foot.h.comida">Comida: 13:00 a 16:00</p>
         </div>
       </div>
 
       <div class="footer-col">
-        <p class="footer-eyebrow">Links</p>
+        <p class="footer-eyebrow" data-i18n="foot.links">Links</p>
         <ul class="footer-links">
-          <li><a href="reservar.html">Reservar</a></li>
-          <li><a href="carta.html">Carta</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="reservar.html" data-i18n="nav.reservar">Reservar</a></li>
+          <li><a href="carta.html" data-i18n="nav.carta">Carta</a></li>
+          <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
           <li class="spacer" aria-hidden="true"></li>
-          <li><a href="privacidad.html">Política de Privacidad</a></li>
-          <li><a href="terminos.html">Términos y condiciones</a></li>
+          <li><a href="privacidad.html" data-i18n="foot.l.privacidad">Política de Privacidad</a></li>
+          <li><a href="terminos.html" data-i18n="foot.l.terminos">Términos y condiciones</a></li>
           <li class="spacer" aria-hidden="true"></li>
-          <li class="footer-credit">Diseñado: <a href="https://141agency.com" target="_blank" rel="noopener">141'Digital</a></li>
+          <li class="footer-credit"><span data-i18n="foot.l.disenado">Diseñado:</span> <a href="https://141agency.com" target="_blank" rel="noopener">141'Digital</a></li>
         </ul>
       </div>
 
@@ -104,6 +104,7 @@
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
