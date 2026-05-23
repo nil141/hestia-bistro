@@ -33,7 +33,7 @@
   --ambar:   #C99B5C;
 
   /* White canvas, dark ink — Aleia-style light theme */
-  --bg:        #FFFFFF;
+  --bg:        #F1ECE1;
   --bg-2:      #F7F2E8;
   --bg-3:      #EDE5D3;
   --ink:       #14100B;
@@ -775,7 +775,7 @@ button{ font-family:inherit; cursor:pointer; }
 .proposal-section{
   padding:220px 130px 220px;
   position:relative;
-  background:#F2F2F2;
+  background:#EEE8D9;
 }
 .proposal-wrap{
   max-width:1240px;
@@ -993,7 +993,7 @@ button{ font-family:inherit; cursor:pointer; }
    ──────────────────────────────────────────────────────── */
 @media (max-width: 768px){
   /* Cream un punto más suave en móvil */
-  :root{ --bg: #FFFFFF; }
+  :root{ --bg: #F4EFE6; }
 
   /* html en espresso: capa de seguridad para cualquier overscroll de iOS */
   html{ background: #191514; }
@@ -1204,6 +1204,46 @@ button{ font-family:inherit; cursor:pointer; }
   min-height: 100vh;
 }
 
+/* Placeholder "Próximamente" mientras no esté el widget de reservas */
+.reservar-placeholder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(60px, 12vw, 160px) clamp(20px, 4vw, 40px);
+  min-height: 50vh;
+}
+.reservar-placeholder-title{
+  font-family: "Dahlia Display", var(--font-display);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -.005em;
+  line-height: 1;
+  font-size: clamp(48px, 8vw, 96px);
+  text-transform: uppercase;
+  color: #241E13;
+  margin: 0 0 clamp(24px, 3vw, 40px);
+}
+.reservar-placeholder-text{
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.8;
+  color: #212529;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0;
+}
+.reservar-placeholder-text a{
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  transition: color .25s ease, border-color .25s ease;
+}
+.reservar-placeholder-text a:hover{
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
 
 /* ────────────────────────────────────────────────────────
    PÁGINA FAQ — estilo editorial Aleia: pregunta XL + respuesta a la derecha
@@ -1327,4 +1367,33 @@ button{ font-family:inherit; cursor:pointer; }
 .legal-item a:hover{
   color: var(--accent-2);
   border-color: var(--accent-2);
+}
+
+
+/* ────────────────────────────────────────────────────────
+   PÁGINA CARTA — menu-line convertidos en links clickables a PDFs
+   ──────────────────────────────────────────────────────── */
+/* Override del bg de la proposal-section: en la página dedicada de la carta
+   queremos que sea el mismo crema que el header/body (no el #EEE8D9 de la home) */
+.proposal-section.carta-page{
+  background: var(--bg);
+}
+.carta-link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--accent);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgb(33,37,41);
+  cursor: pointer;
+}
+.carta-link .menu-line-cta{
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: .15em;
 }

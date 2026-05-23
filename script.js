@@ -124,7 +124,16 @@
   io.observe(track.parentElement);
 })();
 
-// Reveal-on-scroll for sections — opt-in via prefers-reduced-motion off
+// Reveal-on-scroll SOLO para títulos — opt-in vía prefers-reduced-motion off
+//
+// Animación garantizada incluso al navegar rápido entre páginas:
+//   1. Añadir .reveal a los títulos (estado oculto: opacity 0, translateY 28px)
+//   2. Esperar 2 frames con requestAnimationFrame anidado — esto fuerza al
+//      navegador a pintar el estado inicial ANTES de empezar a observar.
+//      Sin este doble-RAF, el navegador puede batchear .reveal + .in en el
+//      mismo frame y saltarse la transición.
+//   3. Empezar a observar — el IntersectionObserver dispara la callback con
+//      el estado .reveal ya pintado, así la transición se ejecuta limpia.
 (function reveal(){
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const io = new IntersectionObserver((entries) => {
@@ -136,17 +145,16 @@
     });
   }, { threshold:0.08, rootMargin:'0px 0px 200px 0px' });
 
-  document.querySelectorAll(
-    '.block-split, .bio-row, .full-image, .propuesta, .food-pair, .cta-strip'
-  ).forEach(el => {
-    el.classList.add('reveal');
-    io.observe(el);
-  });
-  // Reveal anything already in/near the viewport on first paint
+  const els = document.querySelectorAll(
+    '.section-title, .faq-list .faq-item:first-of-type .faq-question, .reservar-placeholder-title'
+  );
+  // Paso 1: estado inicial .reveal
+  els.forEach(el => el.classList.add('reveal'));
+  // Paso 2 + 3: dos rAF anidados → primer frame pinta .reveal, segundo
+  // frame observa (IO disparará con estado válido para transicionar)
   requestAnimationFrame(() => {
-    document.querySelectorAll('.reveal').forEach(el => {
-      const r = el.getBoundingClientRect();
-      if (r.top < window.innerHeight + 200) el.classList.add('in');
+    requestAnimationFrame(() => {
+      els.forEach(el => io.observe(el));
     });
   });
 })();
