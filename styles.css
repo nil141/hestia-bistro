@@ -1068,6 +1068,19 @@ button{ font-family:inherit; cursor:pointer; }
   .proposal-section{
     padding:50px 24px 60px;
   }
+  /* La página dedicada de la carta es la PRIMERA sección bajo el header, así que
+     necesita más padding-top en mobile para no solaparse con él */
+  .proposal-section.carta-page{
+    padding-top: calc(130px + env(safe-area-inset-top, 0px));
+  }
+  /* En la carta-page, el título "NUESTRA CARTA" debe ir en una sola línea
+     (en vez de apilado como en las secciones de la home) */
+  .proposal-section.carta-page .section-title{
+    font-size: clamp(36px, 9vw, 64px);
+  }
+  .proposal-section.carta-page .section-title span{
+    display: inline;
+  }
   .proposal-intro{
     max-width:none;
     margin-top:24px;
