@@ -63,7 +63,7 @@
       'chef.eyebrow': 'El Chef',
       'chef.name.1': 'JOAN',
       'chef.name.2': 'FORTES',
-      'chef.p1'    : 'Nací en l\'Anoia, en el seno de una familia que me enseñó el valor del producto de proximidad y de la cocina hecha con tiempo. A los 18 años dejé mi zona de confort para emprender un viaje que me llevaría por cocinas legendarias en Catalunya y más allá. Tras conseguir experiencia en <strong>mesas con estrella Michelin</strong> y consolidar una visión propia, sentí que era el momento de un nuevo desafío.',
+      'chef.p1'    : 'Nací a los pies de la montaña de Montserrat, en el seno de una familia que me enseñó el valor del producto de proximidad y de la cocina hecha con tiempo. A los 18 años dejé mi zona de confort para emprender un viaje que me llevaría por cocinas legendarias en Catalunya y más allá. Tras conseguir experiencia en <strong>mesas con estrella Michelin</strong> y consolidar una visión propia, sentí que era el momento de un nuevo desafío.',
       'chef.p2'    : '<strong>Hestia</strong> es ese desafío. Es la culminación de una búsqueda constante de la excelencia, pero esta vez, con un ingrediente secreto que lo cambia todo: la cercanía. Trabajar con un equipo que entiende que la alta cocina no necesita protocolo frío es una de las experiencias más estimulantes de mi carrera. Juntos hemos creado un diálogo único entre la <strong>técnica precisa</strong> y los mejores productos de proximidad de <strong>l\'Anoia y Catalunya</strong>. Hestia no es solo un restaurante, es la emoción de cocinar para casa en un escenario íntimo.',
       'chef.btn'   : 'Ver experiencia',
 
@@ -203,7 +203,7 @@
       'chef.eyebrow': 'El Xef',
       'chef.name.1': 'JOAN',
       'chef.name.2': 'FORTES',
-      'chef.p1'    : 'Vaig néixer a l\'Anoia, al si d\'una família que em va ensenyar el valor del producte de proximitat i de la cuina feta amb temps. Als 18 anys vaig deixar la meva zona de confort per emprendre un viatge que em va portar per cuines llegendàries a Catalunya i més enllà. Després d\'aconseguir experiència en <strong>taules amb estrella Michelin</strong> i consolidar una visió pròpia, vaig sentir que era el moment d\'un nou repte.',
+      'chef.p1'    : 'Vaig néixer als peus de la muntanya de Montserrat, al si d\'una família que em va ensenyar el valor del producte de proximitat i de la cuina feta amb temps. Als 18 anys vaig deixar la meva zona de confort per emprendre un viatge que em va portar per cuines llegendàries a Catalunya i més enllà. Després d\'aconseguir experiència en <strong>taules amb estrella Michelin</strong> i consolidar una visió pròpia, vaig sentir que era el moment d\'un nou repte.',
       'chef.p2'    : '<strong>Hestia</strong> és aquest repte. És la culminació d\'una recerca constant de l\'excel·lència, però aquesta vegada, amb un ingredient secret que ho canvia tot: la proximitat. Treballar amb un equip que entén que l\'alta cuina no necessita protocol fred és una de les experiències més estimulants de la meva carrera. Junts hem creat un diàleg únic entre la <strong>tècnica precisa</strong> i els millors productes de proximitat de <strong>l\'Anoia i Catalunya</strong>. Hestia no és només un restaurant, és l\'emoció de cuinar per a casa en un escenari íntim.',
       'chef.btn'   : 'Veure experiència',
 
