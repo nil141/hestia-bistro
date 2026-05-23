@@ -1331,6 +1331,11 @@ button{ font-family:inherit; cursor:pointer; }
 }
 
 @media (max-width: 768px){
+  /* Padding-top mobile reducido — la primera pregunta empieza más arriba
+     (en desktop hay 240px de aire, aquí basta con ~100px para no solaparse) */
+  .faq-main{
+    padding-top: calc(clamp(14px, 2.4vw, 22px) * 2 + 100px + env(safe-area-inset-top, 0px));
+  }
   .faq-item,
   .faq-item:nth-child(odd),
   .faq-item:nth-child(even){
