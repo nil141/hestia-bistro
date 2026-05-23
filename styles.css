@@ -33,7 +33,7 @@
   --ambar:   #C99B5C;
 
   /* White canvas, dark ink — Aleia-style light theme */
-  --bg:        #F1ECE1;
+  --bg:        #FFFFFF;
   --bg-2:      #F7F2E8;
   --bg-3:      #EDE5D3;
   --ink:       #14100B;
@@ -775,7 +775,7 @@ button{ font-family:inherit; cursor:pointer; }
 .proposal-section{
   padding:220px 130px 220px;
   position:relative;
-  background:#EEE8D9;
+  background:#F2F2F2;
 }
 .proposal-wrap{
   max-width:1240px;
@@ -993,7 +993,7 @@ button{ font-family:inherit; cursor:pointer; }
    ──────────────────────────────────────────────────────── */
 @media (max-width: 768px){
   /* Cream un punto más suave en móvil */
-  :root{ --bg: #F4EFE6; }
+  :root{ --bg: #FFFFFF; }
 
   /* html en espresso: capa de seguridad para cualquier overscroll de iOS */
   html{ background: #191514; }
