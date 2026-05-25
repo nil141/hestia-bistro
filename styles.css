@@ -948,7 +948,7 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .chef-photo-fill{
   position:absolute; inset:0;
-  background:url('assets/chef.jpg?v=3') center/cover no-repeat #1a0e08;
+  background:url('assets/chef.jpg?v=4') center/cover no-repeat #1a0e08;
 }
 
 .chef-text{ padding-top:12px; }
