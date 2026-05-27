@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5F7QNDTX');</script>
+<!-- End Google Tag Manager -->
 <title data-i18n="meta.title.reservar">Reservar · Hestia Bistró</title>
-<meta name="description" data-i18n-content="meta.desc.reservar" content="Reserva tu mesa en Hestia Bistró — cocina de autor en Vilanova del Camí." />
+<meta name="description" data-i18n-content="meta.desc.reservar" content="Reserva tu mesa en Hestia Bistró online. Cocina de autor a 1h de Barcelona." />
 <link rel="icon" type="image/png" href="assets/logo-full.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,9 +19,14 @@
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<link rel="stylesheet" href="styles.css?v=20260519d" />
+<link rel="stylesheet" href="styles.css?v=20260527a" />
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5F7QNDTX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 
 <!-- ─── HEADER ─────────────────────────────────────────── -->
 <header class="site-header" id="siteHeader">
@@ -34,20 +46,35 @@
   </div>
 </header>
 
-<!-- ─── PLACEHOLDER PARA EL WIDGET DE COVERMANAGER ─────── -->
+<!-- ─── RESERVAR (motor CoverManager — un iframe por idioma) ──── -->
 <main class="reservar-main">
-  <!-- TODO: cuando esté el widget de CoverManager, sustituir el bloque
-       .reservar-placeholder por el iframe / script -->
-  <div class="reservar-placeholder">
-    <h1 class="reservar-placeholder-title" data-i18n="res.title">Próximamente</h1>
-    <p class="reservar-placeholder-text" data-i18n-html="res.text">
-      Estamos preparando nuestro sistema de reservas online. Mientras tanto,
-      puedes reservar contactándonos en
-      <a href="mailto:hestiabistrorestaurant@gmail.com">hestiabistrorestaurant@gmail.com</a>
-      o por teléfono al
-      <a href="tel:+34931436454">+34 931 43 64 54</a>.
+
+  <section class="reservar-heading">
+    <h1 class="reservar-heading-title" data-i18n="reservar.heading.title">Reserva tu mesa</h1>
+    <p class="reservar-heading-subtitle" data-i18n="reservar.heading.subtitle">
+      Selecciona fecha, hora y número de comensales. Recibirás confirmación inmediata por email.
     </p>
+  </section>
+
+  <!-- iframeResizer de CoverManager — carga única antes de los iframes -->
+  <script type="text/javascript" src="https://www.covermanager.com/js/iframeResizer/iframeResizer.min.js"></script>
+
+  <div data-lang-only="es" class="reservar-iframe-wrapper">
+    <iframe id="restaurante-Hestia-es"
+            title="Reservas Hestia Bistró"
+            src="https://www.covermanager.com/reservation/module_restaurant/restaurante-Hestia/spanish"
+            allow="payment" frameborder="0" height="550" width="100%"
+            onload="iFrameResize();"></iframe>
   </div>
+
+  <div data-lang-only="ca" class="reservar-iframe-wrapper">
+    <iframe id="restaurante-Hestia-ca"
+            title="Reserves Hestia Bistró"
+            src="https://www.covermanager.com/reservation/module_restaurant/restaurante-Hestia/catalan"
+            allow="payment" frameborder="0" height="550" width="100%"
+            onload="iFrameResize();"></iframe>
+  </div>
+
 </main>
 
 <!-- ─── FOOTER ─────────────────────────────────────────── -->
@@ -104,7 +131,7 @@
   </div>
 </footer>
 
-<script src="i18n.js"></script>
+<script src="i18n.js?v=20260527a"></script>
 <script src="script.js"></script>
 </body>
 </html>

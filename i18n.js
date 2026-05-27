@@ -23,11 +23,13 @@
       'meta.title.carta'     : 'Carta · Hestia Bistró',
       'meta.desc.carta'      : 'Nuestra carta de temporada, carta de vinos y carta de bebidas en Hestia Bistró.',
       'meta.title.reservar'  : 'Reservar · Hestia Bistró',
-      'meta.desc.reservar'   : 'Reserva tu mesa en Hestia Bistró — cocina de autor en Vilanova del Camí.',
+      'meta.desc.reservar'   : 'Reserva tu mesa en Hestia Bistró online. Cocina de autor a 1h de Barcelona.',
       'meta.title.terminos'  : 'Términos y condiciones · Hestia Bistró',
       'meta.desc.terminos'   : 'Términos y condiciones de Hestia Bistró: reservas, cancelaciones, alergias y política de datos.',
       'meta.title.privacidad': 'Política de Privacidad · Hestia Bistró',
       'meta.desc.privacidad' : 'Política de Privacidad de Hestia Bistró conforme al Reglamento General de Protección de Datos (RGPD).',
+      'meta.title.gracias'   : 'Gracias por tu reserva · Hestia Bistró',
+      'meta.desc.gracias'    : 'Confirmación de reserva en Hestia Bistró — te esperamos pronto.',
 
       // Header
       'nav.aria'   : 'Primaria',
@@ -65,7 +67,6 @@
       'chef.name.2': 'FORTES',
       'chef.p1'    : 'Nací a los pies de la montaña de Montserrat, en el seno de una familia que me enseñó el valor del producto de proximidad y de la cocina hecha con tiempo. A los 18 años dejé mi zona de confort para emprender un viaje que me llevaría por cocinas legendarias en Catalunya y más allá. Tras conseguir experiencia en <strong>mesas con estrella Michelin</strong> y consolidar una visión propia, sentí que era el momento de un nuevo desafío.',
       'chef.p2'    : '<strong>Hestia</strong> es ese desafío. Es la culminación de una búsqueda constante de la excelencia, pero esta vez, con un ingrediente secreto que lo cambia todo: la cercanía. Trabajar con un equipo que entiende que la alta cocina no necesita protocolo frío es una de las experiencias más estimulantes de mi carrera. Juntos hemos creado un diálogo único entre la <strong>técnica precisa</strong> y los mejores productos de proximidad de <strong>l\'Anoia y Catalunya</strong>. Hestia no es solo un restaurante, es la emoción de cocinar para casa en un escenario íntimo.',
-      'chef.btn'   : 'Ver experiencia',
 
       // Igualada / Anoia (index)
       'terr.title.1': 'EL CORAZÓN',
@@ -94,8 +95,13 @@
       'carta.cta'   : 'Ver PDF →',
 
       // Página RESERVAR
-      'res.title'   : 'Próximamente',
-      'res.text'    : 'Estamos preparando nuestro sistema de reservas online. Mientras tanto, puedes reservar contactándonos en <a href="mailto:hestiabistrorestaurant@gmail.com">hestiabistrorestaurant@gmail.com</a> o por teléfono al <a href="tel:+34931436454">+34 931 43 64 54</a>.',
+      'reservar.heading.title'    : 'Reserva tu mesa',
+      'reservar.heading.subtitle' : 'Selecciona fecha, hora y número de comensales. Recibirás confirmación inmediata por email.',
+
+      // Página GRACIAS (landing post-reserva CoverManager)
+      'gracias.title'    : 'Gracias por tu reserva',
+      'gracias.subtitle' : 'Hemos recibido tu reserva correctamente. Te enviaremos un correo de confirmación en breve. Te esperamos en Hestia Bistró.',
+      'gracias.cta'      : 'Volver al inicio',
 
       // Página FAQ — preguntas + respuestas
       'faq.q1.1'    : '¿Cómo puedo',
@@ -162,12 +168,14 @@
       'meta.desc.faq'        : 'Preguntes freqüents sobre reserves, horaris i dubtes a Hestia Bistró, Vilanova del Camí.',
       'meta.title.carta'     : 'Carta · Hestia Bistró',
       'meta.desc.carta'      : 'La nostra carta de temporada, carta de vins i carta de begudes a Hestia Bistró.',
-      'meta.title.reservar'  : 'Reservar · Hestia Bistró',
-      'meta.desc.reservar'   : 'Reserva la teva taula a Hestia Bistró — cuina d\'autor a Vilanova del Camí.',
+      'meta.title.reservar'  : 'Reserva · Hestia Bistró',
+      'meta.desc.reservar'   : 'Reserva la teva taula a Hestia Bistró online. Cuina d\'autor a 1h de Barcelona.',
       'meta.title.terminos'  : 'Termes i condicions · Hestia Bistró',
       'meta.desc.terminos'   : 'Termes i condicions de Hestia Bistró: reserves, cancel·lacions, al·lèrgies i política de dades.',
       'meta.title.privacidad': 'Política de Privacitat · Hestia Bistró',
       'meta.desc.privacidad' : 'Política de Privacitat de Hestia Bistró conforme al Reglament General de Protecció de Dades (RGPD).',
+      'meta.title.gracias'   : 'Gràcies per la teva reserva · Hestia Bistró',
+      'meta.desc.gracias'    : 'Confirmació de reserva a Hestia Bistró — t\'esperem aviat.',
 
       // Capçalera
       'nav.aria'   : 'Primària',
@@ -205,7 +213,6 @@
       'chef.name.2': 'FORTES',
       'chef.p1'    : 'Vaig néixer als peus de la muntanya de Montserrat, al si d\'una família que em va ensenyar el valor del producte de proximitat i de la cuina feta amb temps. Als 18 anys vaig deixar la meva zona de confort per emprendre un viatge que em va portar per cuines llegendàries a Catalunya i més enllà. Després d\'aconseguir experiència en <strong>taules amb estrella Michelin</strong> i consolidar una visió pròpia, vaig sentir que era el moment d\'un nou repte.',
       'chef.p2'    : '<strong>Hestia</strong> és aquest repte. És la culminació d\'una recerca constant de l\'excel·lència, però aquesta vegada, amb un ingredient secret que ho canvia tot: la proximitat. Treballar amb un equip que entén que l\'alta cuina no necessita protocol fred és una de les experiències més estimulants de la meva carrera. Junts hem creat un diàleg únic entre la <strong>tècnica precisa</strong> i els millors productes de proximitat de <strong>l\'Anoia i Catalunya</strong>. Hestia no és només un restaurant, és l\'emoció de cuinar per a casa en un escenari íntim.',
-      'chef.btn'   : 'Veure experiència',
 
       // Igualada / Anoia
       'terr.title.1': 'EL COR',
@@ -234,8 +241,13 @@
       'carta.cta'   : 'Veure PDF →',
 
       // Pàgina RESERVAR
-      'res.title'   : 'Properament',
-      'res.text'    : 'Estem preparant el nostre sistema de reserves en línia. Mentrestant, pots reservar contactant-nos a <a href="mailto:hestiabistrorestaurant@gmail.com">hestiabistrorestaurant@gmail.com</a> o per telèfon al <a href="tel:+34931436454">+34 931 43 64 54</a>.',
+      'reservar.heading.title'    : 'Reserva la teva taula',
+      'reservar.heading.subtitle' : 'Selecciona data, hora i nombre de comensals. Rebràs confirmació immediata per correu.',
+
+      // Pàgina GRÀCIES (landing post-reserva CoverManager)
+      'gracias.title'    : 'Gràcies per la teva reserva',
+      'gracias.subtitle' : 'Hem rebut la teva reserva correctament. T\'enviarem un correu de confirmació en breu. T\'esperem a Hestia Bistró.',
+      'gracias.cta'      : 'Tornar a l\'inici',
 
       // Pàgina FAQ — preguntes + respostes
       'faq.q1.1'    : 'Com puc',
@@ -341,6 +353,14 @@
       const key = descEl.getAttribute('data-i18n-content');
       if (t[key] !== undefined) descEl.setAttribute('content', t[key]);
     }
+
+    // Bloques visibles solo en un idioma específico (ej. iframes de CoverManager)
+    // Uso: <div data-lang-only="es">…</div> o <div data-lang-only="ca">…</div>
+    // display = '' devuelve al valor que dicte el CSS (block, flex, grid…)
+    document.querySelectorAll('[data-lang-only]').forEach(el => {
+      const only = el.getAttribute('data-lang-only');
+      el.style.display = (only === lang) ? '' : 'none';
+    });
 
     // Marca el botón activo
     document.querySelectorAll('.lang-btn').forEach(btn => {

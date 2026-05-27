@@ -1257,6 +1257,46 @@ button{ font-family:inherit; cursor:pointer; }
   border-color: var(--accent-2);
 }
 
+/* Encabezado introductorio sobre el iframe de CoverManager */
+.reservar-heading{
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp(120px, 14vw, 180px) clamp(20px, 4vw, 40px) clamp(20px, 3vw, 32px);
+}
+.reservar-heading-title{
+  font-family: "Dahlia Display", var(--font-display);
+  font-weight: 500;
+  letter-spacing: -.005em;
+  line-height: 1;
+  font-size: clamp(42px, 6.5vw, 80px);
+  text-transform: uppercase;
+  color: #241E13;
+  margin: 0 0 clamp(16px, 2.4vw, 28px);
+}
+.reservar-heading-subtitle{
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.8;
+  color: #212529;
+  font-weight: 300;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* Wrapper del iframe CoverManager (idioma activo via data-lang-only) */
+.reservar-iframe-wrapper{
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 32px) clamp(60px, 10vw, 120px);
+}
+.reservar-iframe-wrapper iframe{
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+
 
 /* ────────────────────────────────────────────────────────
    PÁGINA FAQ — estilo editorial Aleia: pregunta XL + respuesta a la derecha
