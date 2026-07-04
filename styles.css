@@ -954,6 +954,9 @@ button{ font-family:inherit; cursor:pointer; }
   background:url('assets/chef2.jpg?v=1') center/cover no-repeat #1a0e08;
 }
 .chef-wrap--second{ margin-top:130px; }
+/* Zigzag: en escritorio, Ricardo lleva el texto a la izquierda y la foto a la derecha */
+.chef-wrap--second .chef-text{ order:1; }
+.chef-wrap--second .chef-photo{ order:2; }
 
 .chef-text{ padding-top:12px; }
 .chef-eyebrow{
@@ -1109,6 +1112,9 @@ button{ font-family:inherit; cursor:pointer; }
     gap:28px;
   }
   .chef-wrap--second{ margin-top:56px; }
+  /* En móvil la foto siempre arriba (anula el zigzag de escritorio) */
+  .chef-wrap--second .chef-photo{ order:1; }
+  .chef-wrap--second .chef-text{ order:2; }
   .chef-photo{ aspect-ratio:3/4; }
   .chef-text{ padding-top:0; }
   .chef-name{ margin-bottom:22px !important; }
