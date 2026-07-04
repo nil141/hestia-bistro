@@ -951,7 +951,7 @@ button{ font-family:inherit; cursor:pointer; }
   background:url('assets/chef.jpg?v=4') center/cover no-repeat #1a0e08;
 }
 .chef-photo[data-img="ricardo"] .chef-photo-fill{
-  background:url('assets/ricardo.jpg?v=1') center/cover no-repeat #1a0e08;
+  background:url('assets/chef2.jpg?v=1') center/cover no-repeat #1a0e08;
 }
 .chef-wrap--second{ margin-top:130px; }
 
