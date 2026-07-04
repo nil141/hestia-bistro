@@ -950,6 +950,10 @@ button{ font-family:inherit; cursor:pointer; }
   position:absolute; inset:0;
   background:url('assets/chef.jpg?v=4') center/cover no-repeat #1a0e08;
 }
+.chef-photo[data-img="ricardo"] .chef-photo-fill{
+  background:url('assets/chef2.jpg?v=1') center/cover no-repeat #1a0e08;
+}
+.chef-wrap--second{ margin-top:130px; }
 
 .chef-text{ padding-top:12px; }
 .chef-eyebrow{
@@ -1104,6 +1108,7 @@ button{ font-family:inherit; cursor:pointer; }
     grid-template-columns:1fr;
     gap:28px;
   }
+  .chef-wrap--second{ margin-top:56px; }
   .chef-photo{ aspect-ratio:3/4; }
   .chef-text{ padding-top:0; }
   .chef-name{ margin-bottom:22px !important; }
