@@ -69,7 +69,8 @@
       'chef.p2'    : '<strong>Hestia</strong> es ese desafío. Es la culminación de una búsqueda constante de la excelencia, pero esta vez, con un ingrediente secreto que lo cambia todo: la cercanía. Trabajar con un equipo que entiende que la alta cocina no necesita protocolo frío es una de las experiencias más estimulantes de mi carrera. Juntos hemos creado un diálogo único entre la <strong>técnica precisa</strong> y los mejores productos de proximidad de <strong>l\'Anoia y Catalunya</strong>. Hestia no es solo un restaurante, es la emoción de cocinar para casa en un escenario íntimo.',
       'chef2.eyebrow': 'Jefe de Sala',
       'chef2.name.1': 'RICARDO',
-      'chef2.p1'    : 'Después de más de diez años en la restauración, trabajando en distintos países y también en cocina, entendí que la sala es el puente entre el equipo y quienes nos visitan. Como jefe de sala, mi misión es acompañar cada experiencia gastronómica con cercanía, atención y sensibilidad, para que el trabajo del chef y de todo el equipo llegue a la mesa con el cuidado y el respeto que merece.',
+      'chef2.p1'    : 'Después de más de diez años en la restauración, con una trayectoria que me ha llevado por distintos países y que ha pasado también por la cocina, entendí que la sala es el puente entre el equipo y quienes nos visitan. Haber vivido el servicio desde dentro me ayuda a comprender el esfuerzo que hay detrás de cada plato y a cuidar cada detalle que rodea la mesa.',
+      'chef2.p2'    : 'Como jefe de sala, mi misión es acompañar cada experiencia gastronómica con cercanía, atención y sensibilidad. Estar presente sin interferir, cuidar los tiempos y los pequeños gestos, para que el trabajo del chef y de todo el equipo llegue a la mesa con el cuidado y el respeto que merece.',
 
       // Igualada / Anoia (index)
       'terr.title.1': 'EL CORAZÓN',
@@ -218,7 +219,8 @@
       'chef.p2'    : '<strong>Hestia</strong> és aquest repte. És la culminació d\'una recerca constant de l\'excel·lència, però aquesta vegada, amb un ingredient secret que ho canvia tot: la proximitat. Treballar amb un equip que entén que l\'alta cuina no necessita protocol fred és una de les experiències més estimulants de la meva carrera. Junts hem creat un diàleg únic entre la <strong>tècnica precisa</strong> i els millors productes de proximitat de <strong>l\'Anoia i Catalunya</strong>. Hestia no és només un restaurant, és l\'emoció de cuinar per a casa en un escenari íntim.',
       'chef2.eyebrow': 'Cap de Sala',
       'chef2.name.1': 'RICARDO',
-      'chef2.p1'    : 'Després de més de deu anys a la restauració, treballant en diferents països i també a cuina, vaig entendre que la sala és el pont entre l\'equip i qui ens visita. Com a cap de sala, la meva missió és acompanyar cada experiència gastronòmica amb proximitat, atenció i sensibilitat, perquè la feina del xef i de tot l\'equip arribi a la taula amb la cura i el respecte que mereix.',
+      'chef2.p1'    : 'Després de més de deu anys a la restauració, amb una trajectòria que m\'ha portat per diferents països i que ha passat també per la cuina, vaig entendre que la sala és el pont entre l\'equip i qui ens visita. Haver viscut el servei des de dins m\'ajuda a comprendre l\'esforç que hi ha darrere de cada plat i a tenir cura de cada detall que envolta la taula.',
+      'chef2.p2'    : 'Com a cap de sala, la meva missió és acompanyar cada experiència gastronòmica amb proximitat, atenció i sensibilitat. Ser-hi present sense interferir, cuidar els temps i els petits gestos, perquè la feina del xef i de tot l\'equip arribi a la taula amb la cura i el respecte que mereix.',
 
       // Igualada / Anoia
       'terr.title.1': 'EL COR',
