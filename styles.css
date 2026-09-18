@@ -1215,7 +1215,7 @@ button{ font-family:inherit; cursor:pointer; }
 
 
 /* ────────────────────────────────────────────────────────
-   PÁGINA RESERVAR — placeholder para el widget de CoverManager
+   PÁGINA RESERVAR — placeholder para el widget de reservas
    ──────────────────────────────────────────────────────── */
 .reservar-main{
   /* Margen superior = altura del header (fluido + safe-area) + algo de aire */
@@ -1268,7 +1268,7 @@ button{ font-family:inherit; cursor:pointer; }
   border-color: var(--accent-2);
 }
 
-/* Encabezado introductorio sobre el iframe de CoverManager */
+/* Encabezado introductorio sobre el iframe de reservas */
 .reservar-heading{
   text-align: center;
   max-width: 800px;
@@ -1296,7 +1296,7 @@ button{ font-family:inherit; cursor:pointer; }
   margin: 0 auto;
 }
 
-/* Wrapper del iframe CoverManager (idioma activo via data-lang-only) */
+/* Wrapper del iframe de reservas */
 .reservar-iframe-wrapper{
   max-width: 880px;
   margin: 0 auto;

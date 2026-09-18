@@ -46,7 +46,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<!-- ─── RESERVAR (motor CoverManager — un iframe por idioma) ──── -->
+<!-- ─── RESERVAR (motor de reservas — widget 141 Agency) ──── -->
 <main class="reservar-main">
 
   <section class="reservar-heading">
@@ -56,24 +56,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
   </section>
 
-  <!-- iframeResizer de CoverManager — carga única antes de los iframes -->
-  <script type="text/javascript" src="https://www.covermanager.com/js/iframeResizer/iframeResizer.min.js"></script>
-
-  <div data-lang-only="es" class="reservar-iframe-wrapper">
-    <iframe id="restaurante-Hestia-es"
+  <div class="reservar-iframe-wrapper">
+    <iframe id="booking141"
             title="Reservas Hestia Bistró"
-            src="https://www.covermanager.com/reservation/module_restaurant/restaurante-Hestia/spanish"
-            allow="payment" frameborder="0" height="550" width="100%"
-            onload="iFrameResize();"></iframe>
+            src="https://booking.141agency.com/embed/hestia-bistro"
+            style="width:100%;border:0;" height="560" scrolling="no"></iframe>
   </div>
 
-  <div data-lang-only="ca" class="reservar-iframe-wrapper">
-    <iframe id="restaurante-Hestia-ca"
-            title="Reserves Hestia Bistró"
-            src="https://www.covermanager.com/reservation/module_restaurant/restaurante-Hestia/catalan"
-            allow="payment" frameborder="0" height="550" width="100%"
-            onload="iFrameResize();"></iframe>
-  </div>
+  <script>
+    addEventListener("message", function (e) {
+      if (e.data && e.data.type === "booking-141-resize")
+        document.getElementById("booking141").style.height = e.data.height + "px";
+    });
+  </script>
 
 </main>
 
