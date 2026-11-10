@@ -98,6 +98,9 @@
       'carta.title.2': 'CARTA',
       'carta.intro' : 'En Hestia Bistró ofrecemos una <strong>carta de temporada</strong> acompañada de nuestras <strong>cartas de vinos y bebidas</strong>, pensadas para complementar la experiencia y resaltar cada plato. Selecciona la carta que deseas consultar.',
       'carta.cta'   : 'Ver PDF →',
+      'carta.navidad.subhead': 'Menús de Navidad',
+      'carta.menu.finanio': 'Menú degustación Fin de Año',
+      'carta.menu.navidad': 'Menú Navidad y San Esteban',
 
       // Página RESERVAR
       'reservar.heading.title'    : 'Reserva tu mesa',
@@ -249,6 +252,9 @@
       'carta.title.2': 'CARTA',
       'carta.intro' : 'A Hestia Bistró oferim una <strong>carta de temporada</strong> acompanyada de les nostres <strong>cartes de vins i begudes</strong>, pensades per a complementar l\'experiència i ressaltar cada plat. Selecciona la carta que vulguis consultar.',
       'carta.cta'   : 'Veure PDF →',
+      'carta.navidad.subhead': 'Menús de Nadal',
+      'carta.menu.finanio': 'Menú degustació Cap d\'Any',
+      'carta.menu.navidad': 'Menú Nadal i Sant Esteve',
 
       // Pàgina RESERVAR
       'reservar.heading.title'    : 'Reserva la teva taula',
