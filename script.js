@@ -124,7 +124,21 @@
   io.observe(track.parentElement);
 })();
 
-// Reveal-on-scroll SOLO para títulos — opt-in vía prefers-reduced-motion off
+// Contenido con caducidad: oculta cualquier elemento con data-hide-after="AAAA-MM-DD"
+// a partir de esa fecha (a las 00:00 hora local del visitante). Se usa para los menús
+// de Navidad, que así desaparecen solos de la web cuando pasan las fiestas.
+(function expireContent(){
+  const els = document.querySelectorAll('[data-hide-after]');
+  if (!els.length) return;
+  const now = new Date();
+  els.forEach(el => {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(el.getAttribute('data-hide-after') || '');
+    if (!m) return;
+    const cutoff = new Date(+m[1], +m[2] - 1, +m[3], 0, 0, 0);
+    if (now >= cutoff) el.style.display = 'none';
+  });
+})();
+
 //
 // Animación garantizada incluso al navegar rápido entre páginas:
 //   1. Añadir .reveal a los títulos (estado oculto: opacity 0, translateY 28px)
